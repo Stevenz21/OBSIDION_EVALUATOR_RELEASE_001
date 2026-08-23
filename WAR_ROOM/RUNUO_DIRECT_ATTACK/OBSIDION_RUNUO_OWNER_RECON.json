@@ -1,0 +1,2363 @@
+{
+  "schema": "OBSIDION_RUNUO_CONTRACT_OWNER_RECON_V1",
+  "contracts": [
+    {
+      "contract": "CanFit",
+      "runuo": {
+        "hit_count": 128,
+        "sample": [
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Map.cs",
+            "line": 805,
+            "text": "#region CanFit"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Map.cs",
+            "line": 806,
+            "text": "public bool CanFit( Point3D p, int height, bool checkBlocksFit )"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Map.cs",
+            "line": 808,
+            "text": "return CanFit( p.m_X, p.m_Y, p.m_Z, height, checkBlocksFit, true, true );"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Map.cs",
+            "line": 811,
+            "text": "public bool CanFit( Point3D p, int height, bool checkBlocksFit, bool checkMobiles )"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Map.cs",
+            "line": 813,
+            "text": "return CanFit( p.m_X, p.m_Y, p.m_Z, height, checkBlocksFit, checkMobiles, true );"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Map.cs",
+            "line": 816,
+            "text": "public bool CanFit( Point2D p, int z, int height, bool checkBlocksFit )"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Map.cs",
+            "line": 818,
+            "text": "return CanFit( p.m_X, p.m_Y, z, height, checkBlocksFit, true, true );"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Map.cs",
+            "line": 821,
+            "text": "public bool CanFit( Point3D p, int height )"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Map.cs",
+            "line": 823,
+            "text": "return CanFit( p.m_X, p.m_Y, p.m_Z, height, false, true, true );"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Map.cs",
+            "line": 826,
+            "text": "public bool CanFit( Point2D p, int z, int height )"
+          }
+        ]
+      },
+      "obsidion": {
+        "hit_count": 181,
+        "classification": "RUNTIME_DEFINITION_OR_DECLARATION",
+        "sample": [
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/DoorGenerator.cs",
+            "line": 527,
+            "text": "if (!m_Map.CanFit(x, y, z, 16, false, false))"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Quests/Escortables.cs",
+            "line": 1475,
+            "text": "if (m.Map == null || !m.Map.CanFit(m.Location, 16, false, false))"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Gumps/VendorRentalGumps.cs",
+            "line": 439,
+            "text": "if (!m_Contract.Map.CanFit(m_Contract.Location, 16, false, false))"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Gumps/PetResurrectGump.cs",
+            "line": 121,
+            "text": "if (this.m_Pet.Map == null || !this.m_Pet.Map.CanFit(this.m_Pet.Location, 16, false, false))"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Gumps/ResurrectGump.cs",
+            "line": 245,
+            "text": "if (from.Map == null || !from.Map.CanFit(from.Location, 16, false, false))"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Multis/BaseHouse.cs",
+            "line": 931,
+            "text": "if (Map.CanFit(location.X, location.Y, location.Z, height, false, false, requireSurface))"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Multis/BaseHouse.cs",
+            "line": 1030,
+            "text": "if (Map.CanFit(location, 16, false, false))"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Multis/BaseHouse.cs",
+            "line": 4957,
+            "text": "if (!map.CanFit(p.X, p.Y, p.Z, 20, true, true, true))"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Mobiles/PlayerMobile.cs",
+            "line": 272,
+            "text": "return map.CanFit(p.X, p.Y, p.Z, 16, false, false);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Services/TrickOrTreat.cs",
+            "line": 199,
+            "text": "loc.Z = (map.CanFit(loc, 0)) ? map.GetAverageZ(loc.X, loc.Y) : z;"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Functional/WallSafe.cs",
+            "line": 151,
+            "text": "if (!map.CanFit(p.X, p.Y, p.Z, this.ItemData.Height))"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Functional/SerpentPillar.cs",
+            "line": 179,
+            "text": "if (boat.CanFit(dest, map, boat.ItemID))"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Functional/Ankhs.cs",
+            "line": 102,
+            "text": "else if (m.Map != null && m.Map.CanFit(m.Location, 16, false, false))"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Decorative/Mistletoe.cs",
+            "line": 109,
+            "text": "if (!map.CanFit(p.X, p.Y, p.Z, this.ItemData.Height))"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Resource/RecallRune.cs",
+            "line": 309,
+            "text": "if (map != null && !map.CanFit(x, y, z, 16, false, false))"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Resource/Bandage.cs",
+            "line": 420,
+            "text": "if (m_Patient.Map == null || !m_Patient.Map.CanFit(m_Patient.Location, 16, false, false))"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Resource/Bandage.cs",
+            "line": 734,
+            "text": "else if (!patient.Alive && (patient.Map == null || !patient.Map.CanFit(patient.Location, 16, false, false)))"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Internal/ResGate.cs",
+            "line": 101,
+            "text": "if (!m.Alive && m.Map != null && m.Map.CanFit(m.Location, 16, false, false))"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Addons/DecorativeShield.cs",
+            "line": 192,
+            "text": "if (map == null || !map.CanFit(p.X, p.Y, p.Z, this.ItemData.Height))"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Addons/DecorativeShield.cs",
+            "line": 399,
+            "text": "if (map.CanFit(p3d, id.Height))"
+          }
+        ]
+      }
+    },
+    {
+      "contract": "CanSpawnMobile",
+      "runuo": {
+        "hit_count": 49,
+        "sample": [
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Map.cs",
+            "line": 921,
+            "text": "#region CanSpawnMobile"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Map.cs",
+            "line": 922,
+            "text": "public bool CanSpawnMobile( Point3D p )"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Map.cs",
+            "line": 924,
+            "text": "return CanSpawnMobile( p.m_X, p.m_Y, p.m_Z );"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Map.cs",
+            "line": 927,
+            "text": "public bool CanSpawnMobile( Point2D p, int z )"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Map.cs",
+            "line": 929,
+            "text": "return CanSpawnMobile( p.m_X, p.m_Y, z );"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Map.cs",
+            "line": 932,
+            "text": "public bool CanSpawnMobile( int x, int y, int z )"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Scripts/Items/Misc/DeceitBrazier.cs",
+            "line": 163,
+            "text": "if( Map.CanSpawnMobile( new Point2D( x, y ), this.Z ) )"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Scripts/Items/Misc/DeceitBrazier.cs",
+            "line": 165,
+            "text": "else if( Map.CanSpawnMobile( new Point2D( x, y ), z ) )"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Scripts/Items/Maps/TreasureMap.cs",
+            "line": 167,
+            "text": "if ( map.CanSpawnMobile( x, y, p.Z ) )"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Scripts/Items/Maps/TreasureMap.cs",
+            "line": 176,
+            "text": "if ( map.CanSpawnMobile( x, y, z ) )"
+          }
+        ]
+      },
+      "obsidion": {
+        "hit_count": 111,
+        "classification": "RUNTIME_DEFINITION_OR_DECLARATION",
+        "sample": [
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Services/PlayerZombies.cs",
+            "line": 193,
+            "text": "if (map.CanSpawnMobile(home))"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Services/TrickOrTreat.cs",
+            "line": 180,
+            "text": "twin.MoveToWorld(m_From.Map.CanSpawnMobile(point) ? point : m_From.Location, m_From.Map);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Functional/DeceitBrazier.cs",
+            "line": 277,
+            "text": "if (Map.CanSpawnMobile(new Point2D(x, y), Z))"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Functional/DeceitBrazier.cs",
+            "line": 279,
+            "text": "else if (Map.CanSpawnMobile(new Point2D(x, y), z))"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Containers/TrashBarrel.cs",
+            "line": 283,
+            "text": "if (map.CanSpawnMobile(p))"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Internal/MacawSpawner.cs",
+            "line": 126,
+            "text": "if (this.Map.CanSpawnMobile(x, y, z))"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Consumables/GreenThorns.cs",
+            "line": 365,
+            "text": "if (!from.Map.CanSpawnMobile(land.Location))"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Consumables/GreenThorns.cs",
+            "line": 432,
+            "text": "if (this.Map.CanSpawnMobile(x, y, this.Location.Z))"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Consumables/GreenThorns.cs",
+            "line": 438,
+            "text": "else if (this.Map.CanSpawnMobile(x, y, z))"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Equipment/Talismans/TalismanSummons.cs",
+            "line": 164,
+            "text": "if (Map.CanSpawnMobile(loc))"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Quests/The Ritual/Mobiles.cs",
+            "line": 257,
+            "text": "while (!map.CanSpawnMobile(p.X, p.Y, map.GetAverageZ(p.X, p.Y)) || !Region.Find(p, map).IsPartOf<CatchMeIfYouCanQuest.BexilRegion>());"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Quests/UzeraanTurmoil/Objectives.cs",
+            "line": 510,
+            "text": "if (Map.Trammel.CanSpawnMobile(x, y, z))"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Quests/Eodon/Valley of One Quest/DragonTurtleNest.cs",
+            "line": 184,
+            "text": "if(map.CanSpawnMobile(x, y, z))"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Quests/Eodon/Valley of One Quest/MyrmidexSpawner.cs",
+            "line": 150,
+            "text": "if (map.CanSpawnMobile(x, y, z) && this.InLOS(new Point3D(x, y, z)))"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Quests/Eodon/Valley of One Quest/TigerCubEnclosure.cs",
+            "line": 203,
+            "text": "if(m.Map.CanSpawnMobile(x, y, z) && !this.Contains(new Point3D(x, y, z)))"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Quests/Eodon/Valley of One Quest/Creatures.cs",
+            "line": 198,
+            "text": "if (Server.Spells.SpellHelper.AdjustField(ref p, Map, 12, false))/*Map.CanFit(x, y, z, 16, false, false, true))/*Map.CanSpawnMobile(x, y, z)*/"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Quests/Eodon/Valley of One Quest/Items.cs",
+            "line": 745,
+            "text": "if (from.Map.CanSpawnMobile(x, y, z))"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Quests/Eodon/Valley of One Quest/Quests.cs",
+            "line": 460,
+            "text": "if (Map.TerMur.CanSpawnMobile(x, y, z))"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Spells/Skill Masteries/SummonReaper.cs",
+            "line": 141,
+            "text": "if (map == null || !map.CanSpawnMobile(p.X, p.Y, p.Z))"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Spells/Seventh/GateTravel.cs",
+            "line": 203,
+            "text": "else if (!map.CanSpawnMobile(loc.X, loc.Y, loc.Z) && !isboatkey)"
+          }
+        ]
+      }
+    },
+    {
+      "contract": "Combatant",
+      "runuo": {
+        "hit_count": 258,
+        "sample": [
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Mobile.cs",
+            "line": 2067,
+            "text": "Mobile combatant = m_Mobile.Combatant;"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Mobile.cs",
+            "line": 2072,
+            "text": "m_Mobile.Combatant = null;"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Mobile.cs",
+            "line": 2104,
+            "text": "m_Mobile.Combatant = null;"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Mobile.cs",
+            "line": 2195,
+            "text": "Combatant = m;"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Mobile.cs",
+            "line": 2208,
+            "text": "public virtual Mobile Combatant"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Mobile.cs",
+            "line": 2275,
+            "text": "/// Overridable. Virtual event invoked after the <see cref=\"Combatant\" /> property has changed."
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Mobile.cs",
+            "line": 2276,
+            "text": "/// <seealso cref=\"Combatant\" />"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Mobile.cs",
+            "line": 2322,
+            "text": "if( Combatant == aggressor )"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Mobile.cs",
+            "line": 2406,
+            "text": "if( Combatant == null )"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Mobile.cs",
+            "line": 2420,
+            "text": "if( Combatant == null )"
+          }
+        ]
+      },
+      "obsidion": {
+        "hit_count": 483,
+        "classification": "RUNTIME_DEFINITION_OR_DECLARATION",
+        "sample": [
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Abilities/MysticArc.cs",
+            "line": 110,
+            "text": "if (m.Combatant != attacker)"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Abilities/ShadowStrike.cs",
+            "line": 135,
+            "text": "attacker.Combatant = null;"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Abilities/ForceArrow.cs",
+            "line": 99,
+            "text": "defender.Combatant = null;"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Abilities/DoubleStrike.cs",
+            "line": 113,
+            "text": "attacker.Combatant = null;"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Skills/Hiding.cs",
+            "line": 144,
+            "text": "bool badCombat = (!m_CombatOverride && m.Combatant is Mobile && m.InRange(m.Combatant.Location, range) && ((Mobile)m.Combatant).InLOS(m.Combatant));"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Skills/Hiding.cs",
+            "line": 155,
+            "text": "if (check.InLOS(m) && check.Combatant == m)"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Skills/Peacemaking.cs",
+            "line": 196,
+            "text": "m.Combatant = null;"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Skills/Peacemaking.cs",
+            "line": 278,
+            "text": "targ.Combatant = null;"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Skills/Peacemaking.cs",
+            "line": 312,
+            "text": "targ.Combatant = null;"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Skills/AnimalTaming.cs",
+            "line": 305,
+            "text": "creature.Combatant = from;"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Functional/SerpentsJawbone.cs",
+            "line": 184,
+            "text": "User.Combatant = null;"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Functional/ChickenCoop.cs",
+            "line": 394,
+            "text": "else if (pet.Combatant != null && pet.InRange(pet.Combatant, 12) && pet.Map == pet.Combatant.Map)"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Functional/PublicMoongate.cs",
+            "line": 774,
+            "text": "m_Mobile.Combatant = null;"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Internal/MacawSpawner.cs",
+            "line": 141,
+            "text": "Spawn.ForEach(s => s.Combatant = from);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Addons/DungeonHitchingPost.cs",
+            "line": 240,
+            "text": "else if (pet.Combatant != null && pet.InRange(pet.Combatant, 12) && pet.Map == pet.Combatant.Map)"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Addons/HitchingPost.cs",
+            "line": 418,
+            "text": "else if (pet.Combatant != null && pet.InRange(pet.Combatant, 12) && pet.Map == pet.Combatant.Map)"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Quest/WispOrb.cs",
+            "line": 559,
+            "text": "else if (m_Pet.Combatant != null)"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Damageable/DamageableItem.cs",
+            "line": 380,
+            "text": "if (!CanDamage && from.Combatant == this)"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Damageable/DamageableItem.cs",
+            "line": 382,
+            "text": "from.Combatant = null;"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Consumables/GreenThorns.cs",
+            "line": 435,
+            "text": "creature.Combatant = this.From;"
+          }
+        ]
+      }
+    },
+    {
+      "contract": "GetAverageZ",
+      "runuo": {
+        "hit_count": 81,
+        "sample": [
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Item.cs",
+            "line": 3948,
+            "text": "map.GetAverageZ( x, y, ref landZ, ref landAvg, ref landTop );"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Region.cs",
+            "line": 980,
+            "text": "m_GoLocation = new Point3D( x, y, m_Map.GetAverageZ( x, y ) );"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Region.cs",
+            "line": 1230,
+            "text": "z = map.GetAverageZ( x, y );"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Map.cs",
+            "line": 557,
+            "text": "public int GetAverageZ( int x, int y )"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Map.cs",
+            "line": 561,
+            "text": "GetAverageZ( x, y, ref z, ref avg, ref top );"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Map.cs",
+            "line": 566,
+            "text": "public void GetAverageZ( int x, int y, ref int z, ref int avg, ref int top )"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Map.cs",
+            "line": 859,
+            "text": "GetAverageZ( x, y, ref lowZ, ref avgZ, ref topZ );"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Map.cs",
+            "line": 1014,
+            "text": "GetAverageZ(x, y, ref landZ, ref landAvg, ref landTop);"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Map.cs",
+            "line": 1091,
+            "text": "GetAverageZ( x, y, ref landZ, ref landAvg, ref landTop );"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Map.cs",
+            "line": 1214,
+            "text": "int avgZ = GetAverageZ( p.X, p.Y );"
+          }
+        ]
+      },
+      "obsidion": {
+        "hit_count": 186,
+        "classification": "RUNTIME_DEFINITION_OR_DECLARATION",
+        "sample": [
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/Add.cs",
+            "line": 452,
+            "text": "z = map.GetAverageZ(x, y);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/Handlers.cs",
+            "line": 842,
+            "text": "int z = (e.Length == 3) ? int.Parse(e.GetString(2)) : map.GetAverageZ(x, y);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Regions/BaseRegion.cs",
+            "line": 431,
+            "text": "map.GetAverageZ(x, y, ref ltLowZ, ref ltAvgZ, ref ltTopZ);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Multis/HousePlacement.cs",
+            "line": 227,
+            "text": "map.GetAverageZ(tileX, tileY, ref landStartZ, ref landAvgZ, ref landTopZ);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Services/PumpkinPatch.cs",
+            "line": 137,
+            "text": "int z = map.GetAverageZ(x, y);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Services/PlayerZombies.cs",
+            "line": 218,
+            "text": "return new Point3D(x, y, map.GetAverageZ(x, y));"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Services/TrickOrTreat.cs",
+            "line": 199,
+            "text": "loc.Z = (map.CanFit(loc, 0)) ? map.GetAverageZ(loc.X, loc.Y) : z;"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Services/TrickOrTreat.cs",
+            "line": 324,
+            "text": "new Point3D(3563, 2139, Map.Trammel.GetAverageZ(3563, 2139)), // (New) Magincia"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Functional/DeceitBrazier.cs",
+            "line": 275,
+            "text": "int z = Map.GetAverageZ(x, y);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Functional/HouseRaffleStone.cs",
+            "line": 438,
+            "text": "int z = (this.m_Facet == null) ? 0 : this.m_Facet.GetAverageZ(x, y);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Functional/SerpentPillar.cs",
+            "line": 175,
+            "text": "int z = map.GetAverageZ(x, y);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Functional/PublicMoongate.cs",
+            "line": 380,
+            "text": "new PMEntry(new Point3D(3563, 2139, Map.Trammel.GetAverageZ(3563, 2139)), 1012010), // (New) Magincia"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Functional/PublicMoongate.cs",
+            "line": 398,
+            "text": "new PMEntry(new Point3D(3563, 2139, Map.Felucca.GetAverageZ(3563, 2139)), 1012010), // (New) Magincia"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Tools/Sextant.cs",
+            "line": 164,
+            "text": "z = map.GetAverageZ(x, y);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Containers/TrashBarrel.cs",
+            "line": 279,
+            "text": "int z = map.GetAverageZ(x, y);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Resource/RecallRune.cs",
+            "line": 310,
+            "text": "z = map.GetAverageZ(x, y);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Internal/MacawSpawner.cs",
+            "line": 124,
+            "text": "int z = this.Map.GetAverageZ(x, y);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Addons/GuillotineComponent.cs",
+            "line": 182,
+            "text": "z = c.Map.GetAverageZ(x, y);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Addons/Guillotine.cs",
+            "line": 163,
+            "text": "z = f.GetAverageZ(x, y);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Addons/BedOfNails.cs",
+            "line": 224,
+            "text": "z = this.m_Mobile.Map.GetAverageZ(x, y);"
+          }
+        ]
+      }
+    },
+    {
+      "contract": "GetItemsInRange",
+      "runuo": {
+        "hit_count": 63,
+        "sample": [
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Item.cs",
+            "line": 2210,
+            "text": "public IPooledEnumerable<Item> GetItemsInRange( int range )"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Item.cs",
+            "line": 2218,
+            "text": "return map.GetItemsInRange( m_Location, range );"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Item.cs",
+            "line": 2220,
+            "text": "return map.GetItemsInRange( GetWorldLocation(), range );"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Item.cs",
+            "line": 3976,
+            "text": "IPooledEnumerable<Item> eable = map.GetItemsInRange( p, 0 );"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Mobile.cs",
+            "line": 4714,
+            "text": "public IPooledEnumerable<Item> GetItemsInRange( int range )"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Mobile.cs",
+            "line": 4721,
+            "text": "return map.GetItemsInRange( m_Location, range );"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Map.cs",
+            "line": 645,
+            "text": "public IPooledEnumerable<Item> GetItemsInRange(Point3D p)"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Map.cs",
+            "line": 648,
+            "text": "return GetItemsInRange(p, Core.GlobalMaxUpdateRange);"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Map.cs",
+            "line": 650,
+            "text": "return GetItemsInRange(p, 18);"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Map.cs",
+            "line": 654,
+            "text": "public IPooledEnumerable<Item> GetItemsInRange(Point3D p, int range)"
+          }
+        ]
+      },
+      "obsidion": {
+        "hit_count": 123,
+        "classification": "RUNTIME_DEFINITION_OR_DECLARATION",
+        "sample": [
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/Decorate.cs",
+            "line": 1181,
+            "text": "eable = map.GetItemsInRange(new Point3D(x, y, z), 1);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/Decorate.cs",
+            "line": 1214,
+            "text": "eable = map.GetItemsInRange(new Point3D(x, y, z), 0);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/Decorate.cs",
+            "line": 1239,
+            "text": "eable = map.GetItemsInRange(new Point3D(x, y, z), 0);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/Decorate.cs",
+            "line": 1256,
+            "text": "eable = map.GetItemsInRange(new Point3D(x, y, z), 0);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/Decorate.cs",
+            "line": 1309,
+            "text": "IPooledEnumerable eable = maps[j].GetItemsInRange(loc, 1);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/GenTeleporter.cs",
+            "line": 209,
+            "text": "IPooledEnumerable eable = map.GetItemsInRange(p, 0);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/DecorateMag.cs",
+            "line": 1034,
+            "text": "IPooledEnumerable eable = maps[j].GetItemsInRange(loc, 1);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/DecorateMag.cs",
+            "line": 1082,
+            "text": "eable = map.GetItemsInRange(new Point3D(x, y, z), 1);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/DecorateMag.cs",
+            "line": 1115,
+            "text": "eable = map.GetItemsInRange(new Point3D(x, y, z), 0);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/DecorateMag.cs",
+            "line": 1140,
+            "text": "eable = map.GetItemsInRange(new Point3D(x, y, z), 0);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/DecorateMag.cs",
+            "line": 1157,
+            "text": "eable = map.GetItemsInRange(new Point3D(x, y, z), 0);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/CreateWorld.cs",
+            "line": 638,
+            "text": "IPooledEnumerable eable = map.GetItemsInRange(p, 0);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/SignParser.cs",
+            "line": 160,
+            "text": "IPooledEnumerable eable = map.GetItemsInRange(location, 0);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/SignParser.cs",
+            "line": 320,
+            "text": "eable = Map.Felucca.GetItemsInRange(sign.Location, 0);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/SignParser.cs",
+            "line": 330,
+            "text": "eable = Map.Trammel.GetItemsInRange(sign.Location, 0);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/SHTelGenDelete.cs",
+            "line": 112,
+            "text": "IPooledEnumerable eable = map.GetItemsInRange(p, 0);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/DecorateDelete.cs",
+            "line": 1047,
+            "text": "eable = map.GetItemsInRange(new Point3D(x, y, z), 1);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/DecorateDelete.cs",
+            "line": 1083,
+            "text": "eable = map.GetItemsInRange(new Point3D(x, y, z), 0);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/DecorateDelete.cs",
+            "line": 1109,
+            "text": "eable = map.GetItemsInRange(new Point3D(x, y, z), 0);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/DecorateDelete.cs",
+            "line": 1131,
+            "text": "eable = map.GetItemsInRange(new Point3D(x, y, z), 0);"
+          }
+        ]
+      }
+    },
+    {
+      "contract": "GetMobilesInRange",
+      "runuo": {
+        "hit_count": 106,
+        "sample": [
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Item.cs",
+            "line": 2223,
+            "text": "public IPooledEnumerable<Mobile> GetMobilesInRange( int range )"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Item.cs",
+            "line": 2231,
+            "text": "return map.GetMobilesInRange( m_Location, range );"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Item.cs",
+            "line": 2233,
+            "text": "return map.GetMobilesInRange( GetWorldLocation(), range );"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Mobile.cs",
+            "line": 4734,
+            "text": "public IPooledEnumerable<Mobile> GetMobilesInRange( int range )"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Mobile.cs",
+            "line": 4741,
+            "text": "return map.GetMobilesInRange( m_Location, range );"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Map.cs",
+            "line": 664,
+            "text": "public IPooledEnumerable<Mobile> GetMobilesInRange(Point3D p)"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Map.cs",
+            "line": 667,
+            "text": "return GetMobilesInRange(p, Core.GlobalMaxUpdateRange);"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Map.cs",
+            "line": 669,
+            "text": "return GetMobilesInRange(p, 18);"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Map.cs",
+            "line": 673,
+            "text": "public IPooledEnumerable<Mobile> GetMobilesInRange(Point3D p, int range)"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Map.cs",
+            "line": 765,
+            "text": "public IPooledEnumerable<Mobile> GetMobilesInRange(Point3D p)"
+          }
+        ]
+      },
+      "obsidion": {
+        "hit_count": 206,
+        "classification": "RUNTIME_DEFINITION_OR_DECLARATION",
+        "sample": [
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Regions/GuardedRegion.cs",
+            "line": 197,
+            "text": "IPooledEnumerable eable = focus.GetMobilesInRange(8);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Regions/GuardedRegion.cs",
+            "line": 348,
+            "text": "IPooledEnumerable eable = m.GetMobilesInRange(8);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Regions/GuardedRegion.cs",
+            "line": 392,
+            "text": "IPooledEnumerable eable = Map.GetMobilesInRange(p, 14);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Mobiles/PlayerMobile.cs",
+            "line": 782,
+            "text": "IPooledEnumerable mobiles = Map.GetMobilesInRange(location, 0);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Abilities/LightningArrow.cs",
+            "line": 119,
+            "text": "IPooledEnumerable eable = defender.GetMobilesInRange(5);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Abilities/MysticArc.cs",
+            "line": 103,
+            "text": "IPooledEnumerable eable = attacker.GetMobilesInRange(weapon.MaxRange);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Skills/Hiding.cs",
+            "line": 151,
+            "text": "IPooledEnumerable eable = m.GetMobilesInRange(range);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Skills/DetectHidden.cs",
+            "line": 149,
+            "text": "IPooledEnumerable inRange = src.Map.GetMobilesInRange(p, range);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Skills/DetectHidden.cs",
+            "line": 220,
+            "text": "IPooledEnumerable eable = src.Map.GetMobilesInRange(src.Location, 4);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Skills/Tracking.cs",
+            "line": 264,
+            "text": "IPooledEnumerable eable = from.GetMobilesInRange(range);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Skills/Peacemaking.cs",
+            "line": 183,
+            "text": "IPooledEnumerable eable = from.GetMobilesInRange(range);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Functional/FlameSpurtTrap.cs",
+            "line": 157,
+            "text": "IPooledEnumerable eable = GetMobilesInRange(3);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Functional/SpikeTrap.cs",
+            "line": 226,
+            "text": "IPooledEnumerable eable = GetMobilesInRange(0);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Functional/StoneFaceTrap.cs",
+            "line": 218,
+            "text": "IPooledEnumerable eable = GetMobilesInRange(1);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Tools/Clocks.cs",
+            "line": 319,
+            "text": "IPooledEnumerable ie = clock.GetMobilesInRange(10);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Containers/FillableContainers.cs",
+            "line": 1796,
+            "text": "IPooledEnumerable eable = map.GetMobilesInRange(loc, 60);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Resource/HotGoo.cs",
+            "line": 135,
+            "text": "IPooledEnumerable eable = GetMobilesInRange(0);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Internal/PoolOfAcid.cs",
+            "line": 161,
+            "text": "IPooledEnumerable eable = GetMobilesInRange(0);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Internal/DespiseTeleporter.cs",
+            "line": 126,
+            "text": "IPooledEnumerable eable = master.GetMobilesInRange(3);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Internal/AcidSlime.cs",
+            "line": 159,
+            "text": "IPooledEnumerable eable = GetMobilesInRange(0);"
+          }
+        ]
+      }
+    },
+    {
+      "contract": "GetObjectsInRange",
+      "runuo": {
+        "hit_count": 22,
+        "sample": [
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Item.cs",
+            "line": 2197,
+            "text": "public IPooledEnumerable<IEntity> GetObjectsInRange( int range )"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Item.cs",
+            "line": 2205,
+            "text": "return map.GetObjectsInRange( m_Location, range );"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Item.cs",
+            "line": 2207,
+            "text": "return map.GetObjectsInRange( GetWorldLocation(), range );"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Mobile.cs",
+            "line": 3292,
+            "text": "IPooledEnumerable<IEntity> eable = m_Map.GetObjectsInRange( m_Location, Core.GlobalMaxUpdateRange );"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Mobile.cs",
+            "line": 4724,
+            "text": "public IPooledEnumerable<IEntity> GetObjectsInRange( int range )"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Mobile.cs",
+            "line": 4731,
+            "text": "return map.GetObjectsInRange( m_Location, range );"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Mobile.cs",
+            "line": 4806,
+            "text": "IPooledEnumerable<IEntity> eable = m_Map.GetObjectsInRange( m_Location, range );"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Mobile.cs",
+            "line": 6622,
+            "text": "IPooledEnumerable<IEntity> eable = m_Map.GetObjectsInRange( m_Location, Core.GlobalMaxUpdateRange );"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Mobile.cs",
+            "line": 6821,
+            "text": "IPooledEnumerable<IEntity> eable = m_Map.GetObjectsInRange( m_Location, Core.GlobalMaxUpdateRange );"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Mobile.cs",
+            "line": 9157,
+            "text": "IPooledEnumerable<IEntity> eeable = map.GetObjectsInRange( newLocation, Core.GlobalMaxUpdateRange );"
+          }
+        ]
+      },
+      "obsidion": {
+        "hit_count": 17,
+        "classification": "RUNTIME_DEFINITION_OR_DECLARATION",
+        "sample": [
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Multis/BaseHouse.cs",
+            "line": 581,
+            "text": "IPooledEnumerable eable = map.GetObjectsInRange(location, 0);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Skills/SpiritSpeak.cs",
+            "line": 233,
+            "text": "IPooledEnumerable eable = Caster.GetObjectsInRange(3);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Spells/Base/SpellHelper.cs",
+            "line": 715,
+            "text": "IPooledEnumerable eable = map.GetObjectsInRange(new Point3D(p), range);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Multis/Boats/Plank.cs",
+            "line": 279,
+            "text": "IPooledEnumerable eable = GetObjectsInRange(0);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Services/Doom/GaryRoom.cs",
+            "line": 530,
+            "text": "IPooledEnumerable eable = Map.GetObjectsInRange(p, 0);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Services/Doom/GauntletSpawner.cs",
+            "line": 361,
+            "text": "var e = map.GetObjectsInRange(p, range);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Services/Factions/Core/Faction.cs",
+            "line": 488,
+            "text": "IPooledEnumerable eable = mob.GetObjectsInRange(range);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Services/Expansions/High Seas/Multis/GalleonContainer.cs",
+            "line": 149,
+            "text": "IPooledEnumerable eable = from.Map.GetObjectsInRange(new Point3D(pnt), 0);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Services/Expansions/High Seas/Multis/GalleonPilot.cs",
+            "line": 444,
+            "text": "IPooledEnumerable eable = m_Pilot.Map.GetObjectsInRange(new Point3D(pnt), 0);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Services/Expansions/High Seas/Items/Cannons and Ammo/ShipCannon.cs",
+            "line": 962,
+            "text": "IPooledEnumerable eable = Map.GetObjectsInRange(pnt, 0);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Services/Expansions/High Seas/Items/Cannons and Ammo/ShipCannon.cs",
+            "line": 1028,
+            "text": "IPooledEnumerable eable = map.GetObjectsInRange(pnt, 0);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/CoreAPIs/Owners/OBSIDION_Item_Container_Runtime_OWNER_002.cs",
+            "line": 279,
+            "text": "public virtual IPooledEnumerable GetObjectsInRange(int range)"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/CoreAPIs/Owners/OBSIDION_Item_Container_Runtime_OWNER_002.cs",
+            "line": 281,
+            "text": "return Map?.GetObjectsInRange(Location, range);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/CoreAPIs/Owners/OBSIDION_Item_Container_Runtime_OWNER_002.cs",
+            "line": 286,
+            "text": "return Map?.GetObjectsInRange(Location, range);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/CoreAPIs/Server/World/Eternal.Map.SpatialRuntime.Surface.cs",
+            "line": 121,
+            "text": "public IPooledEnumerable GetObjectsInRange("
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/CoreAPIs/Migration/EROSPatchPass/OBSIDION_Mobile_Runtime_State_NUKE_001.cs",
+            "line": 101,
+            "text": "public virtual IPooledEnumerable GetObjectsInRange(int range)"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/CoreAPIs/Migration/EROSPatchPass/OBSIDION_Mobile_Runtime_State_NUKE_001.cs",
+            "line": 103,
+            "text": "return Map?.GetObjectsInRange(Location, range);"
+          }
+        ]
+      }
+    },
+    {
+      "contract": "ISerializable",
+      "runuo": {
+        "hit_count": 18,
+        "sample": [
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Item.cs",
+            "line": 565,
+            "text": "public class Item : IEntity, IHued, IComparable<Item>, ISerializable, ISpawnable"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Item.cs",
+            "line": 1999,
+            "text": "int ISerializable.TypeReference {"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Item.cs",
+            "line": 2003,
+            "text": "int ISerializable.SerialIdentity {"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Guild.cs",
+            "line": 35,
+            "text": "public abstract class BaseGuild : ISerializable"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Guild.cs",
+            "line": 56,
+            "text": "int ISerializable.TypeReference {"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Guild.cs",
+            "line": 60,
+            "text": "int ISerializable.SerialIdentity {"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Mobile.cs",
+            "line": 509,
+            "text": "public class Mobile : IEntity, IHued, IComparable<Mobile>, ISerializable, ISpawnable"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Mobile.cs",
+            "line": 5839,
+            "text": "int ISerializable.TypeReference"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Mobile.cs",
+            "line": 5844,
+            "text": "int ISerializable.SerialIdentity"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Serialization.cs",
+            "line": 2129,
+            "text": "public interface ISerializable"
+          }
+        ]
+      },
+      "obsidion": {
+        "hit_count": 0,
+        "classification": "NO_LITERAL_RUNTIME_MATCH",
+        "sample": []
+      }
+    },
+    {
+      "contract": "LandTile",
+      "runuo": {
+        "hit_count": 41,
+        "sample": [
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Item.cs",
+            "line": 3944,
+            "text": "LandTile landTile = map.Tiles.GetLandTile( x, y );"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/TileMatrix.cs",
+            "line": 32,
+            "text": "private LandTile[][][] m_LandTiles;"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/TileMatrix.cs",
+            "line": 34,
+            "text": "private LandTile[] m_InvalidLandBlock;"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/TileMatrix.cs",
+            "line": 212,
+            "text": "m_InvalidLandBlock = new LandTile[196];"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/TileMatrix.cs",
+            "line": 214,
+            "text": "m_LandTiles = new LandTile[m_BlockWidth][][];"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/TileMatrix.cs",
+            "line": 341,
+            "text": "public void SetLandBlock( int x, int y, LandTile[] value )"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/TileMatrix.cs",
+            "line": 347,
+            "text": "m_LandTiles[x] = new LandTile[m_BlockHeight][];"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/TileMatrix.cs",
+            "line": 358,
+            "text": "public LandTile[] GetLandBlock( int x, int y )"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/TileMatrix.cs",
+            "line": 364,
+            "text": "m_LandTiles[x] = new LandTile[m_BlockHeight][];"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/TileMatrix.cs",
+            "line": 366,
+            "text": "LandTile[] tiles = m_LandTiles[x][y];"
+          }
+        ]
+      },
+      "obsidion": {
+        "hit_count": 29,
+        "classification": "RUNTIME_DEFINITION_OR_DECLARATION",
+        "sample": [
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Regions/BaseRegion.cs",
+            "line": 428,
+            "text": "LandTile lt = map.Tiles.GetLandTile(x, y);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Multis/HousePlacement.cs",
+            "line": 198,
+            "text": "LandTile landTile = map.Tiles.GetLandTile(tileX, tileY);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Multis/HousePlacement.cs",
+            "line": 361,
+            "text": "LandTile landTile = map.Tiles.GetLandTile(borderPoint.X, borderPoint.Y);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Consumables/SpecialFishingNet.cs",
+            "line": 321,
+            "text": "LandTile t = map.Tiles.GetLandTile(tx, ty);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Spells/Spellweaving/ArcaneCircle.cs",
+            "line": 173,
+            "text": "LandTile lt = map.Tiles.GetLandTile(location.X, location.Y);         // Land   Tiles"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Multis/Boats/BaseBoat.cs",
+            "line": 2124,
+            "text": "LandTile landTile = map.Tiles.GetLandTile(tx, ty);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Multis/Boats/Strandedness.cs",
+            "line": 183,
+            "text": "if ( surface is LandTile )"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Multis/Boats/Strandedness.cs",
+            "line": 185,
+            "text": "int id = ((LandTile)surface).ID;"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Services/Harvest/Fishing.cs",
+            "line": 604,
+            "text": "LandTile t = map.Tiles.GetLandTile(tx, ty);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Services/Harvest/HarvestSystem.cs",
+            "line": 698,
+            "text": "LandTile lt = map.Tiles.GetLandTile(x, y);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Services/Pathing/Movement.cs",
+            "line": 224,
+            "text": "LandTile landTile = map.Tiles.GetLandTile(x, y);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Services/Pathing/Movement.cs",
+            "line": 660,
+            "text": "LandTile landTile = map.Tiles.GetLandTile(xCheck, yCheck);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Services/Spawner/Spawner.cs",
+            "line": 1163,
+            "text": "LandTile landTile = map.Tiles.GetLandTile(x, y);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Services/City Loyalty System/Trading/TradeSystem.cs",
+            "line": 659,
+            "text": "LandTile lt = map.Tiles.GetLandTile(x, y);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Services/XmlSpawner/XmlSpawner Core/XmlSpawner2.cs",
+            "line": 10130,
+            "text": "LandTile lt = map.Tiles.GetLandTile(x, y);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Services/XmlSpawner/XmlSpawner Core/XmlSpawner2.cs",
+            "line": 10304,
+            "text": "LandTile ltile = map.Tiles.GetLandTile(x, y);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Services/ExploringTheDeep/Items/SpecialSalvageHook.cs",
+            "line": 269,
+            "text": "LandTile t = map.Tiles.GetLandTile(tx, ty);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Services/Expansions/High Seas/Spawners/CharybdisSpawner.cs",
+            "line": 292,
+            "text": "LandTile t = map.Tiles.GetLandTile(tx, ty);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Services/Expansions/High Seas/Multis/BaseGalleon.cs",
+            "line": 1310,
+            "text": "LandTile lt = map.Tiles.GetLandTile(x, y);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Services/Expansions/High Seas/Mobiles/Charybdis.cs",
+            "line": 239,
+            "text": "LandTile t = map.Tiles.GetLandTile(newLoc.X, newLoc.Y);"
+          }
+        ]
+      }
+    },
+    {
+      "contract": "MessagePump",
+      "runuo": {
+        "hit_count": 8,
+        "sample": [
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Main.cs",
+            "line": 61,
+            "text": "private static MessagePump m_MessagePump;"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Main.cs",
+            "line": 63,
+            "text": "public static MessagePump MessagePump"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Main.cs",
+            "line": 509,
+            "text": "MessagePump messagePump = m_MessagePump = new MessagePump();"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Network/MessagePump.cs",
+            "line": 2,
+            "text": "*                               MessagePump.cs"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Network/MessagePump.cs",
+            "line": 34,
+            "text": "public class MessagePump"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Network/MessagePump.cs",
+            "line": 41,
+            "text": "public MessagePump()"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Network/NetState.cs",
+            "line": 60,
+            "text": "private MessagePump m_MessagePump;"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Network/NetState.cs",
+            "line": 567,
+            "text": "public NetState( Socket socket, MessagePump messagePump )"
+          }
+        ]
+      },
+      "obsidion": {
+        "hit_count": 0,
+        "classification": "NO_LITERAL_RUNTIME_MATCH",
+        "sample": []
+      }
+    },
+    {
+      "contract": "PacketHandler",
+      "runuo": {
+        "hit_count": 29,
+        "sample": [
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Scripts/Misc/ProtocolExtensions.cs",
+            "line": 11,
+            "text": "private static PacketHandler[] m_Handlers = new PacketHandler[0x100];"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Scripts/Misc/ProtocolExtensions.cs",
+            "line": 20,
+            "text": "m_Handlers[packetID] = new PacketHandler( packetID, 0, ingame, onReceive );"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Scripts/Misc/ProtocolExtensions.cs",
+            "line": 23,
+            "text": "public static PacketHandler GetHandler( int packetID )"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Scripts/Misc/ProtocolExtensions.cs",
+            "line": 35,
+            "text": "PacketHandler ph = GetHandler( packetID );"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Network/PacketHandler.cs",
+            "line": 2,
+            "text": "*                              PacketHandler.cs"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Network/PacketHandler.cs",
+            "line": 28,
+            "text": "public class PacketHandler"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Network/PacketHandler.cs",
+            "line": 36,
+            "text": "public PacketHandler( int packetID, int length, bool ingame, OnPacketReceive onReceive )"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Network/MessagePump.cs",
+            "line": 198,
+            "text": "PacketHandler handler = ns.GetHandler( packetID );"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Network/NetState.cs",
+            "line": 1049,
+            "text": "public PacketHandler GetHandler( int packetID )"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Network/PacketHandlers.cs",
+            "line": 61,
+            "text": "private static PacketHandler[] m_Handlers;"
+          }
+        ]
+      },
+      "obsidion": {
+        "hit_count": 11,
+        "classification": "RUNTIME_DEFINITION_OR_DECLARATION",
+        "sample": [
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Misc/ProtocolExtensions.cs",
+            "line": 80,
+            "text": "private static readonly PacketHandler[] m_Handlers = new PacketHandler[0x100];"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Misc/ProtocolExtensions.cs",
+            "line": 123,
+            "text": "m_Handlers[packetID] = new PacketHandler(packetID, 0, ingame, onReceive);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Misc/ProtocolExtensions.cs",
+            "line": 126,
+            "text": "public static PacketHandler GetHandler(int packetID)"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Misc/ProtocolExtensions.cs",
+            "line": 138,
+            "text": "PacketHandler ph = GetHandler(packetID);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/CoreAPIs/ObsidionEngine/Networking/Core/EternalMessagePump.cs",
+            "line": 235,
+            "text": "PacketHandler handler = ns.GetHandler(packetID);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Core/EROSFramework/Pack1/OBSIDION_ENGINE_Framework_CoreOwner_Contracts.cs",
+            "line": 251,
+            "text": "public partial class PacketHandler"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Core/EROSFramework/Pack1/OBSIDION_ENGINE_Framework_CoreOwner_Contracts.cs",
+            "line": 260,
+            "text": "public PacketHandler(int packetID, int length, bool ingame, OnPacketReceive onReceive)"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Core/EROSFramework/Pack1/OBSIDION_ENGINE_Framework_CoreOwner_Contracts.cs",
+            "line": 291,
+            "text": "private static readonly Dictionary<int, PacketHandler> _handlers = new();"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Core/EROSFramework/Pack1/OBSIDION_ENGINE_Framework_CoreOwner_Contracts.cs",
+            "line": 295,
+            "text": "_handlers[packetID] = new PacketHandler(packetID, length, ingame, onReceive);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Core/EROSFramework/Pack1/OBSIDION_ENGINE_Framework_CoreOwner_Contracts.cs",
+            "line": 298,
+            "text": "public static PacketHandler GetHandler(int packetID)"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Server/Network/NetState.Legacy.Surface.cs",
+            "line": 44,
+            "text": "public virtual PacketHandler GetHandler(int packetID)"
+          }
+        ]
+      }
+    },
+    {
+      "contract": "SaveStrategy",
+      "runuo": {
+        "hit_count": 7,
+        "sample": [
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/World.cs",
+            "line": 772,
+            "text": "SaveStrategy strategy = SaveStrategy.Acquire();"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Persistence/DynamicSaveStrategy.cs",
+            "line": 37,
+            "text": "public sealed class DynamicSaveStrategy : SaveStrategy"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Persistence/StandardSaveStrategy.cs",
+            "line": 32,
+            "text": "public class StandardSaveStrategy : SaveStrategy {"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Persistence/ParallelSaveStrategy.cs",
+            "line": 33,
+            "text": "public sealed class ParallelSaveStrategy : SaveStrategy {"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Persistence/SaveStrategy.cs",
+            "line": 2,
+            "text": "*                             SaveStrategy.cs"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Persistence/SaveStrategy.cs",
+            "line": 26,
+            "text": "public abstract class SaveStrategy"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Persistence/SaveStrategy.cs",
+            "line": 28,
+            "text": "public static SaveStrategy Acquire()"
+          }
+        ]
+      },
+      "obsidion": {
+        "hit_count": 0,
+        "classification": "NO_LITERAL_RUNTIME_MATCH",
+        "sample": []
+      }
+    },
+    {
+      "contract": "Sector",
+      "runuo": {
+        "hit_count": 92,
+        "sample": [
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Mobile.cs",
+            "line": 3165,
+            "text": "Sector oldSector = map.GetSector( oldX, oldY );"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Mobile.cs",
+            "line": 3166,
+            "text": "Sector newSector = map.GetSector( x, y );"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Mobile.cs",
+            "line": 11338,
+            "text": "/// Overridable. Virtual event invoked when the sector this Mobile is in gets <see cref=\"Sector.Activate\">activated</see>."
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Mobile.cs",
+            "line": 11345,
+            "text": "/// Overridable. Virtual event invoked when the sector this Mobile is in gets <see cref=\"Sector.Deactivate\">deactivated</see>."
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Region.cs",
+            "line": 113,
+            "text": "Sector sector = map.GetSector( p );"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Region.cs",
+            "line": 164,
+            "text": "private Sector[] m_Sectors;"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Region.cs",
+            "line": 178,
+            "text": "public Sector[] Sectors{ get{ return m_Sectors; } }"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Region.cs",
+            "line": 243,
+            "text": "List<Sector> sectors = new List<Sector>();"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Region.cs",
+            "line": 252,
+            "text": "Sector startSector = m_Map.GetSector( start );"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Region.cs",
+            "line": 253,
+            "text": "Sector endSector = m_Map.GetSector( end );"
+          }
+        ]
+      },
+      "obsidion": {
+        "hit_count": 60,
+        "classification": "RUNTIME_DEFINITION_OR_DECLARATION",
+        "sample": [
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Regions/BaseRegion.cs",
+            "line": 463,
+            "text": "Sector sector = map.GetSector(x, y);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Multis/BaseHouse.cs",
+            "line": 1237,
+            "text": "Sector sector = map.GetSector(loc);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Multis/HousePlacement.cs",
+            "line": 203,
+            "text": "Sector sector = map.GetSector(tileX, tileY);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Multis/HousePlacement.cs",
+            "line": 384,
+            "text": "Sector sector = map.GetSector(borderPoint.X, borderPoint.Y);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Multis/HousePlacement.cs",
+            "line": 401,
+            "text": "List<Sector> _sectors = new List<Sector>();"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Multis/HousePlacement.cs",
+            "line": 406,
+            "text": "Sector sector = map.GetSector(yard[i]);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Functional/BaseDoor.cs",
+            "line": 591,
+            "text": "Sector sector = m.Map.GetSector(x, y);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Items/Functional/BaseDoor.cs",
+            "line": 618,
+            "text": "Sector sector = map.GetSector(x, y);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Spells/Base/SpellHelper.cs",
+            "line": 243,
+            "text": "Sector sector = map.GetSector(p.X, p.Y);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Multis/Boats/BaseBoat.cs",
+            "line": 118,
+            "text": "Sector sector = map.GetSector(loc);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Services/Pathing/Movement.cs",
+            "line": 216,
+            "text": "private readonly List<Sector> m_Sectors = new List<Sector>();"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Services/Pathing/Movement.cs",
+            "line": 485,
+            "text": "Sector sectorStart = map.GetSector(xStart, yStart);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Services/Pathing/Movement.cs",
+            "line": 486,
+            "text": "Sector sectorForward = map.GetSector(xForward, yForward);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Services/Pathing/Movement.cs",
+            "line": 487,
+            "text": "Sector sectorLeft = map.GetSector(xLeft, yLeft);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Services/Pathing/Movement.cs",
+            "line": 488,
+            "text": "Sector sectorRight = map.GetSector(xRight, yRight);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Services/Pathing/Movement.cs",
+            "line": 490,
+            "text": "List<Sector> sectors = this.m_Sectors;"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Services/Pathing/Movement.cs",
+            "line": 505,
+            "text": "Sector sector = sectors[i];"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Services/Pathing/Movement.cs",
+            "line": 548,
+            "text": "Sector sectorStart = map.GetSector(xStart, yStart);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Services/Pathing/Movement.cs",
+            "line": 549,
+            "text": "Sector sectorForward = map.GetSector(xForward, yForward);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Services/XmlSpawner/XmlSpawner Core/BaseXmlSpawner.cs",
+            "line": 11437,
+            "text": "Sector[] sectors = r.Sectors;"
+          }
+        ]
+      }
+    },
+    {
+      "contract": "SendQueue",
+      "runuo": {
+        "hit_count": 11,
+        "sample": [
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Scripts/Misc/SocketOptions.cs",
+            "line": 26,
+            "text": "SendQueue.CoalesceBufferSize = CoalesceBufferSize;"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Network/SendQueue.cs",
+            "line": 2,
+            "text": "*                               SendQueue.cs"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Network/SendQueue.cs",
+            "line": 27,
+            "text": "public class SendQueue {"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Network/SendQueue.cs",
+            "line": 146,
+            "text": "public SendQueue() {"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Network/NetState.cs",
+            "line": 50,
+            "text": "private SendQueue m_SendQueue;"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Network/NetState.cs",
+            "line": 580,
+            "text": "m_SendQueue = new SendQueue();"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Network/NetState.cs",
+            "line": 634,
+            "text": "SendQueue.Gram gram;"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Network/NetState.cs",
+            "line": 781,
+            "text": "SendQueue.Gram gram;"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Network/NetState.cs",
+            "line": 850,
+            "text": "SendQueue.Gram gram;"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Network/NetState.cs",
+            "line": 955,
+            "text": "SendQueue.Gram gram;"
+          }
+        ]
+      },
+      "obsidion": {
+        "hit_count": 0,
+        "classification": "NO_LITERAL_RUNTIME_MATCH",
+        "sample": []
+      }
+    },
+    {
+      "contract": "StaticTile",
+      "runuo": {
+        "hit_count": 178,
+        "sample": [
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Item.cs",
+            "line": 3956,
+            "text": "StaticTile[] tiles = map.Tiles.GetStaticTiles( x, y, true );"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Item.cs",
+            "line": 3960,
+            "text": "StaticTile tile = tiles[i];"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Item.cs",
+            "line": 4012,
+            "text": "StaticTile tile = tiles[i];"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Item.cs",
+            "line": 4106,
+            "text": "StaticTile tile = tiles[i];"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/TileMatrix.cs",
+            "line": 31,
+            "text": "private StaticTile[][][][][] m_StaticTiles;"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/TileMatrix.cs",
+            "line": 35,
+            "text": "private StaticTile[][][] m_EmptyStaticBlock;"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/TileMatrix.cs",
+            "line": 202,
+            "text": "m_EmptyStaticBlock = new StaticTile[8][][];"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/TileMatrix.cs",
+            "line": 206,
+            "text": "m_EmptyStaticBlock[i] = new StaticTile[8][];"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/TileMatrix.cs",
+            "line": 209,
+            "text": "m_EmptyStaticBlock[i][j] = new StaticTile[0];"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/TileMatrix.cs",
+            "line": 215,
+            "text": "m_StaticTiles = new StaticTile[m_BlockWidth][][][][];"
+          }
+        ]
+      },
+      "obsidion": {
+        "hit_count": 119,
+        "classification": "RUNTIME_DEFINITION_OR_DECLARATION",
+        "sample": [
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/Statics.cs",
+            "line": 85,
+            "text": "private static StaticTile[] m_TileBuffer = new StaticTile[128];"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/Statics.cs",
+            "line": 257,
+            "text": "StaticTile[] oldTiles = ReadStaticBlock(idxReader, mulStream, state.m_X, state.m_Y, matrix.BlockWidth, matrix.BlockHeight, out oldTileCount);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/Statics.cs",
+            "line": 263,
+            "text": "StaticTile[] newTiles = new StaticTile[state.m_List.Count];"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/Statics.cs",
+            "line": 275,
+            "text": "StaticTile newTile = new StaticTile((ushort)item.ItemID, (byte)xOffset, (byte)yOffset, (sbyte)item.Z, (short)item.Hue);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/Statics.cs",
+            "line": 298,
+            "text": "StaticTile toWrite = oldTiles[i];"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/Statics.cs",
+            "line": 309,
+            "text": "StaticTile toWrite = newTiles[i];"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/Statics.cs",
+            "line": 470,
+            "text": "StaticTile[] oldTiles = ReadStaticBlock(idxReader, mulStream, x, y, matrix.BlockWidth, matrix.BlockHeight, out oldTileCount);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/Statics.cs",
+            "line": 476,
+            "text": "StaticTile[] newTiles = new StaticTile[oldTileCount];"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/Statics.cs",
+            "line": 482,
+            "text": "StaticTile oldTile = oldTiles[i];"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/Statics.cs",
+            "line": 517,
+            "text": "StaticTile toWrite = newTiles[i];"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/Statics.cs",
+            "line": 560,
+            "text": "private static StaticTile[] ReadStaticBlock(BinaryReader idxReader, FileStream mulStream, int x, int y, int width, int height, out int count)"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/Statics.cs",
+            "line": 586,
+            "text": "m_TileBuffer = new StaticTile[count];"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/Statics.cs",
+            "line": 588,
+            "text": "StaticTile[] staTiles = m_TileBuffer;"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/DoorGenerator.cs",
+            "line": 494,
+            "text": "StaticTile[] tiles = m_Map.Tiles.GetStaticTiles(x, y);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/DoorGenerator.cs",
+            "line": 498,
+            "text": "StaticTile tile = tiles[i];"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/DoorGenerator.cs",
+            "line": 509,
+            "text": "StaticTile[] tiles = m_Map.Tiles.GetStaticTiles(x, y);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/DoorGenerator.cs",
+            "line": 513,
+            "text": "StaticTile tile = tiles[i];"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/DoorGenerator.cs",
+            "line": 560,
+            "text": "StaticTile[] tiles = m_Map.Tiles.GetStaticTiles(vx, vy);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/DoorGenerator.cs",
+            "line": 564,
+            "text": "StaticTile tile = tiles[i];"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/DoorGenDelete.cs",
+            "line": 474,
+            "text": "StaticTile[] tiles = m_Map.Tiles.GetStaticTiles(vx, vy);"
+          }
+        ]
+      }
+    },
+    {
+      "contract": "TileData",
+      "runuo": {
+        "hit_count": 127,
+        "sample": [
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Item.cs",
+            "line": 2796,
+            "text": "if ( m_ItemID < 0 || m_ItemID > TileData.MaxItemValue || this is BaseMulti )"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Item.cs",
+            "line": 2799,
+            "text": "int weight = TileData.ItemTable[m_ItemID].Weight;"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Item.cs",
+            "line": 3945,
+            "text": "TileFlag landFlags = TileData.LandTable[landTile.ID & TileData.MaxLandValue].Flags;"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Item.cs",
+            "line": 3961,
+            "text": "ItemData id = TileData.ItemTable[tile.ID & TileData.MaxItemValue];"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Item.cs",
+            "line": 3980,
+            "text": "if ( item is BaseMulti || item.ItemID > TileData.MaxItemValue )"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Item.cs",
+            "line": 4013,
+            "text": "ItemData id = TileData.ItemTable[tile.ID & TileData.MaxItemValue];"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Item.cs",
+            "line": 4107,
+            "text": "ItemData id = TileData.ItemTable[tile.ID & TileData.MaxItemValue];"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Item.cs",
+            "line": 4402,
+            "text": "return TileData.ItemTable[m_ItemID & TileData.MaxItemValue];"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/TileMatrix.cs",
+            "line": 638,
+            "text": "get { return TileData.ItemTable[m_ID & TileData.MaxItemValue].Height; }"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/TileData.cs",
+            "line": 2,
+            "text": "*                                TileData.cs"
+          }
+        ]
+      },
+      "obsidion": {
+        "hit_count": 149,
+        "classification": "RUNTIME_DEFINITION_OR_DECLARATION",
+        "sample": [
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/Decorate.cs",
+            "line": 1212,
+            "text": "else if ((TileData.ItemTable[itemID & TileData.MaxItemValue].Flags & TileFlag.LightSource) != 0)"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/DecorateMag.cs",
+            "line": 1113,
+            "text": "else if ((TileData.ItemTable[itemID & TileData.MaxItemValue].Flags & TileFlag.LightSource) != 0)"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/GenCategorization.cs",
+            "line": 179,
+            "text": "if (itemID > TileData.MaxItemValue)"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/DecorateDelete.cs",
+            "line": 1081,
+            "text": "else if ((TileData.ItemTable[itemID & 0x3FFF].Flags & TileFlag.LightSource) != 0)"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Misc/DataPath.cs",
+            "line": 120,
+            "text": "* TileData.mul"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Regions/BaseRegion.cs",
+            "line": 433,
+            "text": "TileFlag ltFlags = TileData.LandTable[lt.ID & TileData.MaxLandValue].Flags;"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Regions/BaseRegion.cs",
+            "line": 450,
+            "text": "ItemData id = TileData.ItemTable[tile.ID & TileData.MaxItemValue];"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Regions/BaseRegion.cs",
+            "line": 469,
+            "text": "if (!(item is BaseMulti) && item.ItemID <= TileData.MaxItemValue && item.AtWorldPoint(x, y))"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Regions/BaseRegion.cs",
+            "line": 571,
+            "text": "ItemData id = TileData.ItemTable[tile.ID & TileData.MaxItemValue];"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Multis/ComponentVerification.cs",
+            "line": 89,
+            "text": "m_ItemTable = CreateTable(TileData.MaxItemValue);"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Multis/ContestHouses.cs",
+            "line": 240,
+            "text": "ItemData data = TileData.ItemTable[entry.m_ItemID & TileData.MaxItemValue];"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Multis/BaseHouse.cs",
+            "line": 1358,
+            "text": "int id = tile.ID & TileData.MaxItemValue;"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Multis/BaseHouse.cs",
+            "line": 1359,
+            "text": "ItemData data = TileData.ItemTable[id];"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Multis/HousePlacement.cs",
+            "line": 199,
+            "text": "int landID = landTile.ID & TileData.MaxLandValue;"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Multis/HousePlacement.cs",
+            "line": 238,
+            "text": "TileFlag addTileFlags = TileData.ItemTable[addTile.ID & TileData.MaxItemValue].Flags;"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Multis/HousePlacement.cs",
+            "line": 255,
+            "text": "if (isFoundation && ((TileData.LandTable[landTile.ID & TileData.MaxLandValue].Flags & TileFlag.Impassable) == 0) && landAvgZ == center.Z)"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Multis/HousePlacement.cs",
+            "line": 261,
+            "text": "ItemData id = TileData.ItemTable[oldTile.ID & TileData.MaxItemValue];"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Multis/HousePlacement.cs",
+            "line": 339,
+            "text": "if (breakTile.Height == 0 && breakTile.Z <= 8 && TileData.ItemTable[breakTile.ID & TileData.MaxItemValue].Surface)"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Multis/HousePlacement.cs",
+            "line": 362,
+            "text": "int landID = landTile.ID & TileData.MaxLandValue;"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Multis/HousePlacement.cs",
+            "line": 364,
+            "text": "if ((TileData.LandTable[landID].Flags & TileFlag.Impassable) != 0)"
+          }
+        ]
+      }
+    },
+    {
+      "contract": "TileList",
+      "runuo": {
+        "hit_count": 18,
+        "sample": [
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/TileMatrix.cs",
+            "line": 301,
+            "text": "private TileList m_TilesList = new TileList();"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/TileMatrix.cs",
+            "line": 411,
+            "text": "private TileList[][] m_Lists;"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/TileMatrix.cs",
+            "line": 449,
+            "text": "m_Lists = new TileList[8][];"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/TileMatrix.cs",
+            "line": 453,
+            "text": "m_Lists[i] = new TileList[8];"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/TileMatrix.cs",
+            "line": 456,
+            "text": "m_Lists[i][j] = new TileList();"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/TileMatrix.cs",
+            "line": 460,
+            "text": "TileList[][] lists = m_Lists;"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/MultiData.cs",
+            "line": 497,
+            "text": "TileList[][] tiles = new TileList[m_Width][];"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/MultiData.cs",
+            "line": 502,
+            "text": "tiles[x] = new TileList[m_Height];"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/MultiData.cs",
+            "line": 506,
+            "text": "tiles[x][y] = new TileList();"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/MultiData.cs",
+            "line": 562,
+            "text": "TileList[][] tiles = new TileList[m_Width][];"
+          }
+        ]
+      },
+      "obsidion": {
+        "hit_count": 0,
+        "classification": "NO_LITERAL_RUNTIME_MATCH",
+        "sample": []
+      }
+    },
+    {
+      "contract": "TileMatrix",
+      "runuo": {
+        "hit_count": 16,
+        "sample": [
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/TileMatrix.cs",
+            "line": 2,
+            "text": "*                               TileMatrix.cs"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/TileMatrix.cs",
+            "line": 29,
+            "text": "public class TileMatrix"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/TileMatrix.cs",
+            "line": 137,
+            "text": "private static List<TileMatrix> m_Instances = new List<TileMatrix>();"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/TileMatrix.cs",
+            "line": 138,
+            "text": "private List<TileMatrix> m_FileShare = new List<TileMatrix>();"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/TileMatrix.cs",
+            "line": 140,
+            "text": "public TileMatrix( Map owner, int fileIndex, int mapID, int width, int height )"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/TileMatrix.cs",
+            "line": 145,
+            "text": "TileMatrix tm = m_Instances[i];"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/TileMatrix.cs",
+            "line": 263,
+            "text": "TileMatrix shared = m_FileShare[i];"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/TileMatrix.cs",
+            "line": 373,
+            "text": "TileMatrix shared = m_FileShare[i];"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Map.cs",
+            "line": 453,
+            "text": "private TileMatrix m_Tiles;"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/Map.cs",
+            "line": 1564,
+            "text": "public TileMatrix Tiles"
+          }
+        ]
+      },
+      "obsidion": {
+        "hit_count": 7,
+        "classification": "RUNTIME_DEFINITION_OR_DECLARATION",
+        "sample": [
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/Statics.cs",
+            "line": 237,
+            "text": "TileMatrix matrix = map.Tiles;"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Commands/Statics.cs",
+            "line": 448,
+            "text": "TileMatrix matrix = map.Tiles;"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/CoreAPIs/Server/World/OBSIDION_ENGINE.Map.Compatibility.API.cs",
+            "line": 158,
+            "text": "private Ultima.TileMatrix _tiles ="
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/CoreAPIs/Server/World/OBSIDION_ENGINE.Map.Compatibility.API.cs",
+            "line": 159,
+            "text": "new Ultima.TileMatrix();"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/CoreAPIs/Server/World/OBSIDION_ENGINE.Map.Compatibility.API.cs",
+            "line": 161,
+            "text": "public virtual Ultima.TileMatrix Tiles"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/CoreAPIs/Server/World/OBSIDION_ENGINE.Map.Compatibility.API.cs",
+            "line": 169,
+            "text": "_tiles = value ?? new Ultima.TileMatrix();"
+          },
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Core/EROSFramework/Pack1/OBSIDION_ENGINE_Framework_Pack1F.cs",
+            "line": 216,
+            "text": "public class TileMatrix"
+          }
+        ]
+      }
+    },
+    {
+      "contract": "TileMatrixPatch",
+      "runuo": {
+        "hit_count": 7,
+        "sample": [
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/TileMatrix.cs",
+            "line": 51,
+            "text": "private TileMatrixPatch m_Patch;"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/TileMatrix.cs",
+            "line": 63,
+            "text": "public TileMatrixPatch Patch"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/TileMatrix.cs",
+            "line": 219,
+            "text": "m_Patch = new TileMatrixPatch( this, mapID );"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/TileMatrixPatch.cs",
+            "line": 2,
+            "text": "*                            TileMatrixPatch.cs"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/TileMatrixPatch.cs",
+            "line": 28,
+            "text": "public class TileMatrixPatch"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Server/TileMatrixPatch.cs",
+            "line": 64,
+            "text": "public TileMatrixPatch( TileMatrix matrix, int index )"
+          },
+          {
+            "file": "/home/steven/Desktop/Opened sources_Used For Refrences Only/Master sources/runuo-master/Scripts/Misc/MapDefinitions.cs",
+            "line": 41,
+            "text": "TileMatrixPatch.Enabled = false; // OSI Client Patch 6.0.0.0"
+          }
+        ]
+      },
+      "obsidion": {
+        "hit_count": 1,
+        "classification": "RUNTIME_USAGE",
+        "sample": [
+          {
+            "file": "/home/steven/Desktop/OBSIDION/Scripts/Misc/MapDefinitions.cs",
+            "line": 121,
+            "text": "TileMatrixPatch.Enabled = false; // OSI Client Patch 6.0.0.0"
+          }
+        ]
+      }
+    }
+  ],
+  "execution": {
+    "runuo_executed": false,
+    "runuo_mutated": false,
+    "obsidion_executed": false,
+    "obsidion_source_mutated": false,
+    "build_executed": false
+  }
+}

@@ -1,0 +1,1988 @@
+{
+  "schema": "OBSIDION_RUNUO_FINAL_FIVE_OWNER_RESOLUTION_V1",
+  "summary": {
+    "PERSISTENCE_OWNER_CANDIDATE": 1,
+    "NETWORK_OWNER_CANDIDATE": 2,
+    "PERSISTENCE_STRATEGY_CANDIDATE": 1,
+    "TILE_OWNER_CANDIDATE": 1
+  },
+  "contracts": [
+    {
+      "contract": "ISerializable",
+      "status": "PERSISTENCE_OWNER_CANDIDATE",
+      "candidate_files": [
+        {
+          "requested_path": "ScriptLayer.cs",
+          "resolved_path": "ScriptLayer.cs",
+          "hits": [
+            {
+              "line": 113,
+              "text": "// LOAD SCRIPT OBJECTS"
+            }
+          ],
+          "error": null
+        },
+        {
+          "requested_path": "ErosContentLoader.cs",
+          "resolved_path": "ErosContentLoader.cs",
+          "hits": [
+            {
+              "line": 89,
+              "text": "public static void Load()"
+            },
+            {
+              "line": 104,
+              "text": "JsonSerializer.Deserialize<PsychoticDragonData>(json);"
+            },
+            {
+              "line": 108,
+              "text": "Console.WriteLine(\"[EROS] Failed to deserialize dragon.\");"
+            },
+            {
+              "line": 117,
+              "text": "Console.WriteLine(\"[EROS] Content Load Error:\");"
+            }
+          ],
+          "error": null
+        }
+      ]
+    },
+    {
+      "contract": "MessagePump",
+      "status": "NETWORK_OWNER_CANDIDATE",
+      "candidate_files": [
+        {
+          "requested_path": "Program.cs",
+          "resolved_path": "Program.cs",
+          "hits": [
+            {
+              "line": 33,
+              "text": "sb.AppendLine($\"[{kvp.Key}] -> ERROR: {ex.Message}\");"
+            },
+            {
+              "line": 48,
+              "text": "diagnostics.RegisterSubsystem(\"Orion_Packet_Buffer\", () => \"Stable - 0 packet drop delta\");"
+            }
+          ],
+          "error": null
+        },
+        {
+          "requested_path": "CoreEvents.cs",
+          "resolved_path": "CoreEvents.cs",
+          "hits": [
+            {
+              "line": 189,
+              "text": "public string Message;"
+            },
+            {
+              "line": 194,
+              "text": "Message = m;"
+            }
+          ],
+          "error": null
+        },
+        {
+          "requested_path": "NetworkServer.cs",
+          "resolved_path": "NetworkServer.cs",
+          "hits": [
+            {
+              "line": 114,
+              "text": "Console.WriteLine(\"[NET ACCEPT ERROR] \" + ex.Message);"
+            },
+            {
+              "line": 132,
+              "text": "Console.WriteLine($\"[NET] Waiting for packet...\");"
+            },
+            {
+              "line": 201,
+              "text": "Console.WriteLine(\"[ORION] Login character packet received.\");"
+            },
+            {
+              "line": 215,
+              "text": "Console.WriteLine(\"[ORION] Login complete packet received.\");"
+            },
+            {
+              "line": 236,
+              "text": "Console.WriteLine($\"[ORION] Unknown packet 0x{opcode:X2} LEN={read}\");"
+            },
+            {
+              "line": 244,
+              "text": "Console.WriteLine(\"[NET CLIENT ERROR] \" + ex.Message);"
+            },
+            {
+              "line": 255,
+              "text": "byte[] packet = new byte[46];"
+            },
+            {
+              "line": 257,
+              "text": "packet[0] = 0xA8;"
+            },
+            {
+              "line": 258,
+              "text": "WriteUShort(packet, 1, (ushort)packet.Length);"
+            },
+            {
+              "line": 259,
+              "text": "packet[3] = 0x00;"
+            },
+            {
+              "line": 260,
+              "text": "WriteUShort(packet, 4, 1);"
+            },
+            {
+              "line": 261,
+              "text": "WriteUShort(packet, 6, 0);"
+            },
+            {
+              "line": 262,
+              "text": "WriteFixed(packet, 8, \"EROS\", 32);"
+            },
+            {
+              "line": 263,
+              "text": "packet[40] = 0;"
+            },
+            {
+              "line": 264,
+              "text": "packet[41] = 0;"
+            },
+            {
+              "line": 266,
+              "text": "packet[42] = ip2[0];"
+            },
+            {
+              "line": 267,
+              "text": "packet[43] = ip2[1];"
+            },
+            {
+              "line": 268,
+              "text": "packet[44] = ip2[2];"
+            },
+            {
+              "line": 269,
+              "text": "packet[45] = ip2[3];"
+            },
+            {
+              "line": 271,
+              "text": "SendPacket(stream, packet, packet.Length);"
+            },
+            {
+              "line": 279,
+              "text": "byte[] packet = new byte[11];"
+            },
+            {
+              "line": 281,
+              "text": "packet[0] = 0x8C;"
+            },
+            {
+              "line": 283,
+              "text": "packet[1] = ip[0];"
+            },
+            {
+              "line": 284,
+              "text": "packet[2] = ip[1];"
+            },
+            {
+              "line": 285,
+              "text": "packet[3] = ip[2];"
+            },
+            {
+              "line": 286,
+              "text": "packet[4] = ip[3];"
+            },
+            {
+              "line": 287,
+              "text": "WriteUShort(packet, 5, (ushort)ServerSettings.Port);"
+            },
+            {
+              "line": 290,
+              "text": "packet[7] = (byte)((_authId >> 24) & 0xFF);"
+            },
+            {
+              "line": 291,
+              "text": "packet[8] = (byte)((_authId >> 16) & 0xFF);"
+            },
+            {
+              "line": 292,
+              "text": "packet[9] = (byte)((_authId >> 8) & 0xFF);"
+            },
+            {
+              "line": 293,
+              "text": "packet[10] = (byte)(_authId & 0xFF);"
+            },
+            {
+              "line": 298,
+              "text": "SendPacket(stream, packet, packet.Length);"
+            },
+            {
+              "line": 310,
+              "text": "byte[] packet = new byte[1024];"
+            },
+            {
+              "line": 313,
+              "text": "packet[pos++] = 0xA9;"
+            },
+            {
+              "line": 317,
+              "text": "packet[pos++] = (byte)count;"
+            },
+            {
+              "line": 319,
+              "text": "WriteFixed(packet, ref pos, _loginState.Account.GetCharacterName(0), 30);"
+            },
+            {
+              "line": 320,
+              "text": "WriteFixed(packet, ref pos, \"\", 30);"
+            },
+            {
+              "line": 324,
+              "text": "WriteFixed(packet, ref pos, \"\", 30);"
+            },
+            {
+              "line": 325,
+              "text": "WriteFixed(packet, ref pos, \"\", 30);"
+            },
+            {
+              "line": 330,
+              "text": "packet[pos++] = 1; // city count"
+            }
+          ],
+          "error": null
+        },
+        {
+          "requested_path": "OBSIDION_ENGINE_CORE.cs",
+          "resolved_path": "OBSIDION_ENGINE_CORE.cs",
+          "hits": [
+            {
+              "line": 189,
+              "text": "public string Message;"
+            },
+            {
+              "line": 194,
+              "text": "Message = m;"
+            }
+          ],
+          "error": null
+        }
+      ]
+    },
+    {
+      "contract": "SaveStrategy",
+      "status": "PERSISTENCE_STRATEGY_CANDIDATE",
+      "candidate_files": [
+        {
+          "requested_path": "dashboard/settings_manager.py",
+          "resolved_path": "dashboard/settings_manager.py",
+          "hits": [
+            {
+              "line": 83,
+              "text": "def save(self) -> None:"
+            }
+          ],
+          "error": null
+        },
+        {
+          "requested_path": "dashboard/state_manager.py",
+          "resolved_path": "dashboard/state_manager.py",
+          "hits": [
+            {
+              "line": 52,
+              "text": "Central state storage for the OBSIDION Platform."
+            },
+            {
+              "line": 106,
+              "text": "def snapshot(self) -> dict[str, Any]:"
+            },
+            {
+              "line": 110,
+              "text": "def restore(self, snapshot: dict[str, Any]) -> None:"
+            },
+            {
+              "line": 112,
+              "text": "self._state = deepcopy(snapshot)"
+            }
+          ],
+          "error": null
+        },
+        {
+          "requested_path": "Scripts/Accounting/AccountComment.cs",
+          "resolved_path": "Scripts/Accounting/AccountComment.cs",
+          "hits": [
+            {
+              "line": 143,
+              "text": "public void Save(XmlTextWriter xml)"
+            }
+          ],
+          "error": null
+        },
+        {
+          "requested_path": "Scripts/Accounting/Firewall.cs",
+          "resolved_path": "Scripts/Accounting/Firewall.cs",
+          "hits": [
+            {
+              "line": 315,
+              "text": "Save();"
+            },
+            {
+              "line": 325,
+              "text": "Save();"
+            },
+            {
+              "line": 344,
+              "text": "Save();"
+            },
+            {
+              "line": 354,
+              "text": "Save();"
+            },
+            {
+              "line": 364,
+              "text": "Save();"
+            },
+            {
+              "line": 367,
+              "text": "public static void Save()"
+            }
+          ],
+          "error": null
+        }
+      ]
+    },
+    {
+      "contract": "SendQueue",
+      "status": "NETWORK_OWNER_CANDIDATE",
+      "candidate_files": [
+        {
+          "requested_path": "ScriptLayer.cs",
+          "resolved_path": "ScriptLayer.cs",
+          "hits": [
+            {
+              "line": 102,
+              "text": "OBSIDION_ENGINE.Core.Events.EventQueue.Enqueue((OBSIDION_ENGINE.Core.Events.GameEvent)e);"
+            }
+          ],
+          "error": null
+        },
+        {
+          "requested_path": "Program.cs",
+          "resolved_path": "Program.cs",
+          "hits": [
+            {
+              "line": 48,
+              "text": "diagnostics.RegisterSubsystem(\"Orion_Packet_Buffer\", () => \"Stable - 0 packet drop delta\");"
+            }
+          ],
+          "error": null
+        },
+        {
+          "requested_path": "CoreEvents.cs",
+          "resolved_path": "CoreEvents.cs",
+          "hits": [
+            {
+              "line": 114,
+              "text": "// EVENT QUEUE"
+            },
+            {
+              "line": 118,
+              "text": "private static readonly Queue<GameEvent> queue = new();"
+            },
+            {
+              "line": 120,
+              "text": "public static void Enqueue(GameEvent e)"
+            },
+            {
+              "line": 122,
+              "text": "queue.Enqueue(e);"
+            },
+            {
+              "line": 127,
+              "text": "int count = queue.Count;"
+            },
+            {
+              "line": 131,
+              "text": "var e = queue.Dequeue();"
+            },
+            {
+              "line": 136,
+              "text": "public static int Pending => queue.Count;"
+            }
+          ],
+          "error": null
+        },
+        {
+          "requested_path": "ScriptPurifier.cs",
+          "resolved_path": "ScriptPurifier.cs",
+          "hits": [
+            {
+              "line": 97,
+              "text": "\"OBSIDION_ENGINE.Core.Events.EventQueue.Enqueue(new SpawnEvent($1));\");"
+            },
+            {
+              "line": 101,
+              "text": "\"OBSIDION_ENGINE.Core.Events.EventQueue.Enqueue(new DespawnEvent($1));\");"
+            },
+            {
+              "line": 108,
+              "text": "\"OBSIDION_ENGINE.Core.Events.EventQueue.Enqueue(new MessageEvent(this, $1));\");"
+            },
+            {
+              "line": 115,
+              "text": "\"OBSIDION_ENGINE.Core.Events.EventQueue.Enqueue(new DamageEvent(this, $1, $2));\");"
+            },
+            {
+              "line": 122,
+              "text": "\"OBSIDION_ENGINE.Core.Events.EventQueue.Enqueue(new EntityDeathEvent(this));\");"
+            }
+          ],
+          "error": null
+        },
+        {
+          "requested_path": "NetworkServer.cs",
+          "resolved_path": "NetworkServer.cs",
+          "hits": [
+            {
+              "line": 132,
+              "text": "Console.WriteLine($\"[NET] Waiting for packet...\");"
+            },
+            {
+              "line": 177,
+              "text": "stream.Flush();"
+            },
+            {
+              "line": 201,
+              "text": "Console.WriteLine(\"[ORION] Login character packet received.\");"
+            },
+            {
+              "line": 215,
+              "text": "Console.WriteLine(\"[ORION] Login complete packet received.\");"
+            },
+            {
+              "line": 236,
+              "text": "Console.WriteLine($\"[ORION] Unknown packet 0x{opcode:X2} LEN={read}\");"
+            },
+            {
+              "line": 255,
+              "text": "byte[] packet = new byte[46];"
+            },
+            {
+              "line": 257,
+              "text": "packet[0] = 0xA8;"
+            },
+            {
+              "line": 258,
+              "text": "WriteUShort(packet, 1, (ushort)packet.Length);"
+            },
+            {
+              "line": 259,
+              "text": "packet[3] = 0x00;"
+            },
+            {
+              "line": 260,
+              "text": "WriteUShort(packet, 4, 1);"
+            },
+            {
+              "line": 261,
+              "text": "WriteUShort(packet, 6, 0);"
+            },
+            {
+              "line": 262,
+              "text": "WriteFixed(packet, 8, \"EROS\", 32);"
+            },
+            {
+              "line": 263,
+              "text": "packet[40] = 0;"
+            },
+            {
+              "line": 264,
+              "text": "packet[41] = 0;"
+            },
+            {
+              "line": 266,
+              "text": "packet[42] = ip2[0];"
+            },
+            {
+              "line": 267,
+              "text": "packet[43] = ip2[1];"
+            },
+            {
+              "line": 268,
+              "text": "packet[44] = ip2[2];"
+            },
+            {
+              "line": 269,
+              "text": "packet[45] = ip2[3];"
+            },
+            {
+              "line": 271,
+              "text": "SendPacket(stream, packet, packet.Length);"
+            },
+            {
+              "line": 272,
+              "text": "stream.Flush();"
+            },
+            {
+              "line": 279,
+              "text": "byte[] packet = new byte[11];"
+            },
+            {
+              "line": 281,
+              "text": "packet[0] = 0x8C;"
+            },
+            {
+              "line": 283,
+              "text": "packet[1] = ip[0];"
+            },
+            {
+              "line": 284,
+              "text": "packet[2] = ip[1];"
+            },
+            {
+              "line": 285,
+              "text": "packet[3] = ip[2];"
+            },
+            {
+              "line": 286,
+              "text": "packet[4] = ip[3];"
+            },
+            {
+              "line": 287,
+              "text": "WriteUShort(packet, 5, (ushort)ServerSettings.Port);"
+            },
+            {
+              "line": 290,
+              "text": "packet[7] = (byte)((_authId >> 24) & 0xFF);"
+            },
+            {
+              "line": 291,
+              "text": "packet[8] = (byte)((_authId >> 16) & 0xFF);"
+            },
+            {
+              "line": 292,
+              "text": "packet[9] = (byte)((_authId >> 8) & 0xFF);"
+            },
+            {
+              "line": 293,
+              "text": "packet[10] = (byte)(_authId & 0xFF);"
+            },
+            {
+              "line": 298,
+              "text": "SendPacket(stream, packet, packet.Length);"
+            },
+            {
+              "line": 299,
+              "text": "stream.Flush();"
+            },
+            {
+              "line": 310,
+              "text": "byte[] packet = new byte[1024];"
+            },
+            {
+              "line": 313,
+              "text": "packet[pos++] = 0xA9;"
+            },
+            {
+              "line": 317,
+              "text": "packet[pos++] = (byte)count;"
+            },
+            {
+              "line": 319,
+              "text": "WriteFixed(packet, ref pos, _loginState.Account.GetCharacterName(0), 30);"
+            },
+            {
+              "line": 320,
+              "text": "WriteFixed(packet, ref pos, \"\", 30);"
+            },
+            {
+              "line": 324,
+              "text": "WriteFixed(packet, ref pos, \"\", 30);"
+            },
+            {
+              "line": 325,
+              "text": "WriteFixed(packet, ref pos, \"\", 30);"
+            }
+          ],
+          "error": null
+        },
+        {
+          "requested_path": "OBSIDION_ENGINE_CORE.cs",
+          "resolved_path": "OBSIDION_ENGINE_CORE.cs",
+          "hits": [
+            {
+              "line": 114,
+              "text": "// EVENT QUEUE (ONLY ONE)"
+            },
+            {
+              "line": 118,
+              "text": "private static readonly Queue<GameEvent> queue = new();"
+            },
+            {
+              "line": 120,
+              "text": "public static void Enqueue(GameEvent e)"
+            },
+            {
+              "line": 122,
+              "text": "queue.Enqueue(e);"
+            },
+            {
+              "line": 127,
+              "text": "int count = queue.Count;"
+            },
+            {
+              "line": 131,
+              "text": "var e = queue.Dequeue();"
+            },
+            {
+              "line": 136,
+              "text": "public static int Pending => queue.Count;"
+            }
+          ],
+          "error": null
+        }
+      ]
+    },
+    {
+      "contract": "TileList",
+      "status": "TILE_OWNER_CANDIDATE",
+      "candidate_files": [
+        {
+          "requested_path": "Scripts/Commands/Decorate.cs",
+          "resolved_path": "Scripts/Commands/Decorate.cs",
+          "hits": [
+            {
+              "line": 85,
+              "text": "private static string m_Key;"
+            },
+            {
+              "line": 86,
+              "text": "public static string Key"
+            },
+            {
+              "line": 91,
+              "text": "public static void Initialize()"
+            },
+            {
+              "line": 98,
+              "text": "private static void Decorate_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 115,
+              "text": "public static void Generate(string keyName, string folder, params Map[] maps)"
+            },
+            {
+              "line": 139,
+              "text": "public static void GenerateFromFile(string keyName, string path, params Map[] maps)"
+            },
+            {
+              "line": 160,
+              "text": "public static void GenerateRestricted(string keyName, string folder, Type restrictType, bool derivesFrom, params Map[] maps)"
+            },
+            {
+              "line": 187,
+              "text": "public static Item FindByID(int id)"
+            },
+            {
+              "line": 203,
+              "text": "private static List<DecorationList> m_List;"
+            },
+            {
+              "line": 205,
+              "text": "private static Mobile m_Mobile;"
+            },
+            {
+              "line": 206,
+              "text": "private static int m_Count;"
+            },
+            {
+              "line": 249,
+              "text": "private static readonly Type typeofStatic = typeof(Static);"
+            },
+            {
+              "line": 250,
+              "text": "private static readonly Type typeofLocalizedStatic = typeof(LocalizedStatic);"
+            },
+            {
+              "line": 251,
+              "text": "private static readonly Type typeofBaseDoor = typeof(BaseDoor);"
+            },
+            {
+              "line": 252,
+              "text": "private static readonly Type typeofAnkhWest = typeof(AnkhWest);"
+            },
+            {
+              "line": 253,
+              "text": "private static readonly Type typeofAnkhNorth = typeof(AnkhNorth);"
+            },
+            {
+              "line": 254,
+              "text": "private static readonly Type typeofBeverage = typeof(BaseBeverage);"
+            },
+            {
+              "line": 255,
+              "text": "private static readonly Type typeofLocalizedSign = typeof(LocalizedSign);"
+            },
+            {
+              "line": 256,
+              "text": "private static readonly Type typeofMarkContainer = typeof(MarkContainer);"
+            },
+            {
+              "line": 257,
+              "text": "private static readonly Type typeofWarningItem = typeof(WarningItem);"
+            },
+            {
+              "line": 258,
+              "text": "private static readonly Type typeofHintItem = typeof(HintItem);"
+            },
+            {
+              "line": 259,
+              "text": "private static readonly Type typeofCannon = typeof(Cannon);"
+            },
+            {
+              "line": 260,
+              "text": "private static readonly Type typeofSerpentPillar = typeof(SerpentPillar);"
+            },
+            {
+              "line": 261,
+              "text": "private static readonly Type typeofAddonComponent = typeof(AddonComponent);"
+            },
+            {
+              "line": 274,
+              "text": "item = new Static(m_ItemID);"
+            },
+            {
+              "line": 1169,
+              "text": "private static readonly Queue m_DeleteQueue = new Queue();"
+            },
+            {
+              "line": 1171,
+              "text": "private static bool FindItem(int x, int y, int z, Map map, Item srcItem)"
+            },
+            {
+              "line": 1212,
+              "text": "else if ((TileData.ItemTable[itemID & TileData.MaxItemValue].Flags & TileFlag.LightSource) != 0)"
+            },
+            {
+              "line": 1354,
+              "text": "public static List<DecorationList> ReadRestricted(string path, Type type, bool derivesFrom)"
+            },
+            {
+              "line": 1359,
+              "text": "public static List<DecorationList> ReadAll(string path)"
+            },
+            {
+              "line": 1372,
+              "text": "private static readonly string[] m_EmptyParams = new string[0];"
+            },
+            {
+              "line": 1374,
+              "text": "public static DecorationList Read(StreamReader ip)"
+            }
+          ],
+          "error": null
+        },
+        {
+          "requested_path": "Scripts/Commands/Statics.cs",
+          "resolved_path": "Scripts/Commands/Statics.cs",
+          "hits": [
+            {
+              "line": 83,
+              "text": "private static readonly Point3D NullP3D = new Point3D(int.MinValue, int.MinValue, int.MinValue);"
+            },
+            {
+              "line": 84,
+              "text": "private static byte[] m_Buffer;"
+            },
+            {
+              "line": 85,
+              "text": "private static StaticTile[] m_TileBuffer = new StaticTile[128];"
+            },
+            {
+              "line": 96,
+              "text": "\"Those items <u>will be removed from the static files</u> and exchanged with unmovable dynamic items.  \" +"
+            },
+            {
+              "line": 104,
+              "text": "public static void Initialize()"
+            },
+            {
+              "line": 116,
+              "text": "[Description(\"Makes a targeted area of dynamic items static.\")]"
+            },
+            {
+              "line": 117,
+              "text": "public static void Freeze_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 123,
+              "text": "[Description(\"Makes every dynamic item in your map static.\")]"
+            },
+            {
+              "line": 124,
+              "text": "public static void FreezeMap_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 133,
+              "text": "[Description(\"Makes every dynamic item on all maps static.\")]"
+            },
+            {
+              "line": 134,
+              "text": "public static void FreezeWorld_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 139,
+              "text": "public static void SendWarning(Mobile m, string header, string baseWarning, Map map, Point3D start, Point3D end, WarningGumpCallback callback)"
+            },
+            {
+              "line": 144,
+              "text": "public static void Freeze(Mobile from, Map targetMap, Point3D start3d, Point3D end3d)"
+            },
+            {
+              "line": 163,
+              "text": "if (item is Static || item is BaseFloor || item is BaseWall)"
+            },
+            {
+              "line": 196,
+              "text": "if (item is Static || item is BaseFloor || item is BaseWall)"
+            },
+            {
+              "line": 224,
+              "text": "from.SendGump(new NoticeGump(1060637, 30720, \"No freezable items were found.  Only the following item types are frozen:<br> - Static<br> - BaseFloor<br> - BaseWall\", 0xFFC000, 320, 240, null, null));"
+            },
+            {
+              "line": 237,
+              "text": "TileMatrix matrix = map.Tiles;"
+            },
+            {
+              "line": 343,
+              "text": "[Description(\"Makes a targeted area of static items dynamic.\")]"
+            },
+            {
+              "line": 344,
+              "text": "public static void Unfreeze_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 350,
+              "text": "[Description(\"Makes every static item in your map dynamic.\")]"
+            },
+            {
+              "line": 351,
+              "text": "public static void UnfreezeMap_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 360,
+              "text": "[Description(\"Makes every static item on all maps dynamic.\")]"
+            },
+            {
+              "line": 361,
+              "text": "public static void UnfreezeWorld_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 366,
+              "text": "public static void DoUnfreeze(Map map, ref bool badDataFile, ref int totalUnfrozen)"
+            },
+            {
+              "line": 371,
+              "text": "public static void Unfreeze(Mobile from, Map map, Point3D start, Point3D end)"
+            },
+            {
+              "line": 405,
+              "text": "private static void FreezeBox_Callback(Mobile from, Map map, Point3D start, Point3D end, object state)"
+            },
+            {
+              "line": 410,
+              "text": "private static void FreezeWarning_Callback(Mobile from, bool okay, object state)"
+            },
+            {
+              "line": 420,
+              "text": "private static void UnfreezeBox_Callback(Mobile from, Map map, Point3D start, Point3D end, object state)"
+            },
+            {
+              "line": 425,
+              "text": "private static void UnfreezeWarning_Callback(Mobile from, bool okay, object state)"
+            },
+            {
+              "line": 435,
+              "text": "private static void DoUnfreeze(Map map, Point2D start, Point2D end, ref bool badDataFile, ref int totalUnfrozen)"
+            },
+            {
+              "line": 448,
+              "text": "TileMatrix matrix = map.Tiles;"
+            },
+            {
+              "line": 495,
+              "text": "Item item = new Static(oldTile.ID);"
+            },
+            {
+              "line": 545,
+              "text": "private static FileStream OpenWrite(FileStream orig)"
+            },
+            {
+              "line": 560,
+              "text": "private static StaticTile[] ReadStaticBlock(BinaryReader idxReader, FileStream mulStream, int x, int y, int width, int height, out int count)"
+            }
+          ],
+          "error": null
+        },
+        {
+          "requested_path": "Scripts/Commands/DecorateMag.cs",
+          "resolved_path": "Scripts/Commands/DecorateMag.cs",
+          "hits": [
+            {
+              "line": 83,
+              "text": "private static Mobile m_Mobile;"
+            },
+            {
+              "line": 84,
+              "text": "private static int m_Count;"
+            },
+            {
+              "line": 85,
+              "text": "public static void Initialize()"
+            },
+            {
+              "line": 90,
+              "text": "public static void Generate(string folder, params Map[] maps)"
+            },
+            {
+              "line": 108,
+              "text": "private static void DecorateMag_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 124,
+              "text": "private static readonly Type typeofStatic = typeof(Static);"
+            },
+            {
+              "line": 125,
+              "text": "private static readonly Type typeofLocalizedStatic = typeof(LocalizedStatic);"
+            },
+            {
+              "line": 126,
+              "text": "private static readonly Type typeofBaseDoor = typeof(BaseDoor);"
+            },
+            {
+              "line": 127,
+              "text": "private static readonly Type typeofAnkhWest = typeof(AnkhWest);"
+            },
+            {
+              "line": 128,
+              "text": "private static readonly Type typeofAnkhNorth = typeof(AnkhNorth);"
+            },
+            {
+              "line": 129,
+              "text": "private static readonly Type typeofBeverage = typeof(BaseBeverage);"
+            },
+            {
+              "line": 130,
+              "text": "private static readonly Type typeofLocalizedSign = typeof(LocalizedSign);"
+            },
+            {
+              "line": 131,
+              "text": "private static readonly Type typeofMarkContainer = typeof(MarkContainer);"
+            },
+            {
+              "line": 132,
+              "text": "private static readonly Type typeofWarningItem = typeof(WarningItem);"
+            },
+            {
+              "line": 133,
+              "text": "private static readonly Type typeofHintItem = typeof(HintItem);"
+            },
+            {
+              "line": 134,
+              "text": "private static readonly Type typeofCannon = typeof(Cannon);"
+            },
+            {
+              "line": 135,
+              "text": "private static readonly Type typeofSerpentPillar = typeof(SerpentPillar);"
+            },
+            {
+              "line": 136,
+              "text": "private static readonly Queue m_DeleteQueue = new Queue();"
+            },
+            {
+              "line": 137,
+              "text": "private static readonly string[] m_EmptyParams = new string[0];"
+            },
+            {
+              "line": 146,
+              "text": "public static ArrayList ReadAll(string path)"
+            },
+            {
+              "line": 159,
+              "text": "public static DecorationListMag Read(StreamReader ip)"
+            },
+            {
+              "line": 234,
+              "text": "item = new Static(this.m_ItemID);"
+            },
+            {
+              "line": 1072,
+              "text": "private static bool FindItem(int x, int y, int z, Map map, Item srcItem)"
+            },
+            {
+              "line": 1113,
+              "text": "else if ((TileData.ItemTable[itemID & TileData.MaxItemValue].Flags & TileFlag.LightSource) != 0)"
+            }
+          ],
+          "error": null
+        },
+        {
+          "requested_path": "Scripts/Commands/DoorGenerator.cs",
+          "resolved_path": "Scripts/Commands/DoorGenerator.cs",
+          "hits": [
+            {
+              "line": 79,
+              "text": "private static readonly Rectangle2D[] m_BritRegions = new Rectangle2D[]"
+            },
+            {
+              "line": 98,
+              "text": "private static readonly Rectangle2D[] m_IlshRegions = new Rectangle2D[]"
+            },
+            {
+              "line": 102,
+              "text": "private static readonly Rectangle2D[] m_MalasRegions = new Rectangle2D[]"
+            },
+            {
+              "line": 106,
+              "text": "private static readonly int[] m_SouthFrames = new int[]"
+            },
+            {
+              "line": 179,
+              "text": "private static readonly int[] m_NorthFrames = new int[]"
+            },
+            {
+              "line": 251,
+              "text": "private static readonly int[] m_EastFrames = new int[]"
+            },
+            {
+              "line": 324,
+              "text": "private static readonly int[] m_WestFrames = new int[]"
+            },
+            {
+              "line": 396,
+              "text": "private static Map m_Map;"
+            },
+            {
+              "line": 397,
+              "text": "private static int m_Count;"
+            },
+            {
+              "line": 398,
+              "text": "public static void Initialize()"
+            },
+            {
+              "line": 405,
+              "text": "public static void DoorGen_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 410,
+              "text": "public static void Generate()"
+            },
+            {
+              "line": 454,
+              "text": "public static bool IsFrame(int id, int[] list)"
+            },
+            {
+              "line": 472,
+              "text": "public static bool IsNorthFrame(int id)"
+            },
+            {
+              "line": 477,
+              "text": "public static bool IsSouthFrame(int id)"
+            },
+            {
+              "line": 482,
+              "text": "public static bool IsWestFrame(int id)"
+            },
+            {
+              "line": 487,
+              "text": "public static bool IsEastFrame(int id)"
+            },
+            {
+              "line": 492,
+              "text": "public static bool IsEastFrame(int x, int y, int z)"
+            },
+            {
+              "line": 494,
+              "text": "StaticTile[] tiles = m_Map.Tiles.GetStaticTiles(x, y);"
+            },
+            {
+              "line": 496,
+              "text": "for (int i = 0; i < tiles.Length; ++i)"
+            },
+            {
+              "line": 498,
+              "text": "StaticTile tile = tiles[i];"
+            },
+            {
+              "line": 500,
+              "text": "if (tile.Z == z && IsEastFrame(tile.ID))"
+            },
+            {
+              "line": 507,
+              "text": "public static bool IsSouthFrame(int x, int y, int z)"
+            },
+            {
+              "line": 509,
+              "text": "StaticTile[] tiles = m_Map.Tiles.GetStaticTiles(x, y);"
+            },
+            {
+              "line": 511,
+              "text": "for (int i = 0; i < tiles.Length; ++i)"
+            },
+            {
+              "line": 513,
+              "text": "StaticTile tile = tiles[i];"
+            },
+            {
+              "line": 515,
+              "text": "if (tile.Z == z && IsSouthFrame(tile.ID))"
+            },
+            {
+              "line": 522,
+              "text": "public static BaseDoor AddDoor(int x, int y, int z, DoorFacing facing)"
+            },
+            {
+              "line": 551,
+              "text": "public static void Generate(Rectangle2D region)"
+            },
+            {
+              "line": 560,
+              "text": "StaticTile[] tiles = m_Map.Tiles.GetStaticTiles(vx, vy);"
+            },
+            {
+              "line": 562,
+              "text": "for (int i = 0; i < tiles.Length; ++i)"
+            },
+            {
+              "line": 564,
+              "text": "StaticTile tile = tiles[i];"
+            },
+            {
+              "line": 566,
+              "text": "int id = tile.ID;"
+            },
+            {
+              "line": 567,
+              "text": "int z = tile.Z;"
+            }
+          ],
+          "error": null
+        },
+        {
+          "requested_path": "Scripts/Commands/GenCategorization.cs",
+          "resolved_path": "Scripts/Commands/GenCategorization.cs",
+          "hits": [
+            {
+              "line": 82,
+              "text": "private static readonly Type typeofItem = typeof(Item);"
+            },
+            {
+              "line": 83,
+              "text": "private static readonly Type typeofMobile = typeof(Mobile);"
+            },
+            {
+              "line": 84,
+              "text": "private static readonly Type typeofConstructable = typeof(ConstructableAttribute);"
+            },
+            {
+              "line": 85,
+              "text": "private static CategoryEntry m_RootItems, m_RootMobiles;"
+            },
+            {
+              "line": 86,
+              "text": "public static CategoryEntry Items"
+            },
+            {
+              "line": 96,
+              "text": "public static CategoryEntry Mobiles"
+            },
+            {
+              "line": 106,
+              "text": "public static void Initialize()"
+            },
+            {
+              "line": 113,
+              "text": "public static void RebuildCategorization_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 122,
+              "text": "public static void RecurseFindCategories(CategoryEntry ce, ArrayList list)"
+            },
+            {
+              "line": 130,
+              "text": "public static void Export(CategoryEntry ce, string fileName, string title)"
+            },
+            {
+              "line": 146,
+              "text": "public static void RecurseExport(XmlTextWriter xml, CategoryEntry ce)"
+            },
+            {
+              "line": 179,
+              "text": "if (itemID > TileData.MaxItemValue)"
+            },
+            {
+              "line": 219,
+              "text": "public static void Load()"
+            },
+            {
+              "line": 232,
+              "text": "private static CategoryEntry Load(ArrayList types, string config)"
+            },
+            {
+              "line": 249,
+              "text": "private static bool IsConstructable(Type type)"
+            },
+            {
+              "line": 259,
+              "text": "private static void AddTypes(Assembly asm, ArrayList types)"
+            },
+            {
+              "line": 275,
+              "text": "private static void Fill(CategoryEntry root, ArrayList list)"
+            },
+            {
+              "line": 295,
+              "text": "private static CategoryEntry GetDeepestMatch(CategoryEntry root, Type type)"
+            },
+            {
+              "line": 521,
+              "text": "public static CategoryLine[] Load(string path)"
+            }
+          ],
+          "error": null
+        },
+        {
+          "requested_path": "Scripts/Commands/DecorateDelete.cs",
+          "resolved_path": "Scripts/Commands/DecorateDelete.cs",
+          "hits": [
+            {
+              "line": 83,
+              "text": "public static void Initialize()"
+            },
+            {
+              "line": 90,
+              "text": "private static void DecorateDelete_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 110,
+              "text": "public static void Generate(string folder, params Map[] maps)"
+            },
+            {
+              "line": 131,
+              "text": "public static Item FindByID(int id)"
+            },
+            {
+              "line": 147,
+              "text": "private static ArrayList m_List;"
+            },
+            {
+              "line": 150,
+              "text": "private static Mobile m_Mobile;"
+            },
+            {
+              "line": 151,
+              "text": "private static int m_Count;"
+            },
+            {
+              "line": 196,
+              "text": "private static readonly Type typeofStatic = typeof(Static);"
+            },
+            {
+              "line": 197,
+              "text": "private static readonly Type typeofLocalizedStatic = typeof(LocalizedStatic);"
+            },
+            {
+              "line": 198,
+              "text": "private static readonly Type typeofBaseDoor = typeof(BaseDoor);"
+            },
+            {
+              "line": 199,
+              "text": "private static readonly Type typeofAnkhWest = typeof(AnkhWest);"
+            },
+            {
+              "line": 200,
+              "text": "private static readonly Type typeofAnkhNorth = typeof(AnkhNorth);"
+            },
+            {
+              "line": 201,
+              "text": "private static readonly Type typeofBeverage = typeof(BaseBeverage);"
+            },
+            {
+              "line": 202,
+              "text": "private static readonly Type typeofLocalizedSign = typeof(LocalizedSign);"
+            },
+            {
+              "line": 203,
+              "text": "private static readonly Type typeofMarkContainer = typeof(MarkContainer);"
+            },
+            {
+              "line": 204,
+              "text": "private static readonly Type typeofWarningItem = typeof(WarningItem);"
+            },
+            {
+              "line": 205,
+              "text": "private static readonly Type typeofHintItem = typeof(HintItem);"
+            },
+            {
+              "line": 206,
+              "text": "private static readonly Type typeofCannon = typeof(Cannon);"
+            },
+            {
+              "line": 207,
+              "text": "private static readonly Type typeofSerpentPillar = typeof(SerpentPillar);"
+            },
+            {
+              "line": 217,
+              "text": "item = new Static(this.m_ItemID);"
+            },
+            {
+              "line": 1035,
+              "text": "private static readonly Queue<Item> m_DeleteQueue = new Queue<Item>();"
+            },
+            {
+              "line": 1037,
+              "text": "private static bool FindItemDelete(int x, int y, int z, Map map, Item srcItem)"
+            },
+            {
+              "line": 1081,
+              "text": "else if ((TileData.ItemTable[itemID & 0x3FFF].Flags & TileFlag.LightSource) != 0)"
+            },
+            {
+              "line": 1190,
+              "text": "public static ArrayList ReadAll(string path)"
+            },
+            {
+              "line": 1203,
+              "text": "private static readonly string[] m_EmptyParams = new string[0];"
+            },
+            {
+              "line": 1205,
+              "text": "public static DecorationListDelete Read(StreamReader ip)"
+            },
+            {
+              "line": 1272,
+              "text": "public static void Initialize()"
+            },
+            {
+              "line": 1279,
+              "text": "private static void DecorateMLDelete_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 1417,
+              "text": "private static readonly Queue<Item> m_DeleteQueue = new Queue<Item>();"
+            },
+            {
+              "line": 1419,
+              "text": "public static bool FindItem(int x, int y, int z, Map map, Item test)"
+            },
+            {
+              "line": 1424,
+              "text": "public static bool FindItem(Point3D p, Map map, Item test)"
+            }
+          ],
+          "error": null
+        },
+        {
+          "requested_path": "Scripts/Commands/Add.cs",
+          "resolved_path": "Scripts/Commands/Add.cs",
+          "hits": [
+            {
+              "line": 83,
+              "text": "private static readonly Type m_EntityType = typeof(IEntity);"
+            },
+            {
+              "line": 84,
+              "text": "private static readonly Type m_ConstructableType = typeof(ConstructableAttribute);"
+            },
+            {
+              "line": 85,
+              "text": "private static readonly Type m_EnumType = typeof(Enum);"
+            },
+            {
+              "line": 86,
+              "text": "private static readonly Type m_TypeType = typeof(Type);"
+            },
+            {
+              "line": 87,
+              "text": "private static readonly Type m_ParsableType = typeof(ParsableAttribute);"
+            },
+            {
+              "line": 88,
+              "text": "private static readonly Type[] m_ParseTypes = new Type[] { typeof(string) };"
+            },
+            {
+              "line": 89,
+              "text": "private static readonly object[] m_ParseArgs = new object[1];"
+            },
+            {
+              "line": 90,
+              "text": "private static readonly Type[] m_SignedNumerics = new Type[]"
+            },
+            {
+              "line": 97,
+              "text": "private static readonly Type[] m_UnsignedNumerics = new Type[]"
+            },
+            {
+              "line": 111,
+              "text": "public static void Initialize()"
+            },
+            {
+              "line": 113,
+              "text": "CommandSystem.Register(\"Tile\", AccessLevel.GameMaster, new CommandEventHandler(Tile_OnCommand));"
+            },
+            {
+              "line": 126,
+              "text": "public static void Invoke(Mobile from, Point3D start, Point3D end, string[] args)"
+            },
+            {
+              "line": 131,
+              "text": "public static void Invoke(Mobile from, Point3D start, Point3D end, string[] args, List<Container> packs)"
+            },
+            {
+              "line": 136,
+              "text": "public static void Invoke(Mobile from, Point3D start, Point3D end, string[] args, List<Container> packs, bool outline, bool mapAvg)"
+            },
+            {
+              "line": 203,
+              "text": "public static void FixSetString(ref string[] args, int index)"
+            },
+            {
+              "line": 211,
+              "text": "public static void FixArgs(ref string[] args)"
+            },
+            {
+              "line": 219,
+              "text": "public static int BuildObjects(Mobile from, Type type, Point3D start, Point3D end, string[] args, string[,] props, List<Container> packs)"
+            },
+            {
+              "line": 224,
+              "text": "public static int BuildObjects(Mobile from, Type type, Point3D start, Point3D end, string[] args, string[,] props, List<Container> packs, bool outline, bool mapAvg)"
+            },
+            {
+              "line": 234,
+              "text": "PropertyInfo[] allProps = type.GetProperties(BindingFlags.Static | BindingFlags.Instance | BindingFlags.Public);"
+            },
+            {
+              "line": 296,
+              "text": "public static object[] ParseValues(ParameterInfo[] paramList, string[] args)"
+            },
+            {
+              "line": 313,
+              "text": "public static object ParseValue(Type type, string value)"
+            },
+            {
+              "line": 355,
+              "text": "public static IEntity Build(Mobile from, ConstructorInfo ctor, object[] values, string[,] props, PropertyInfo[] realProps, ref bool sendError)"
+            },
+            {
+              "line": 386,
+              "text": "public static int Build(Mobile from, Point3D start, Point3D end, ConstructorInfo ctor, object[] values, string[,] props, PropertyInfo[] realProps, List<Container> packs)"
+            },
+            {
+              "line": 391,
+              "text": "public static int Build(Mobile from, Point3D start, Point3D end, ConstructorInfo ctor, object[] values, string[,] props, PropertyInfo[] realProps, List<Container> packs, bool outline, bool mapAvg)"
+            },
+            {
+              "line": 483,
+              "text": "public static void SendUsage(Type type, Mobile from)"
+            },
+            {
+              "line": 508,
+              "text": "public static void SendCtor(Type type, ConstructorInfo ctor, Mobile from)"
+            },
+            {
+              "line": 531,
+              "text": "[Usage(\"Tile <name> [params] [set {<propertyName> <value> ...}]\")]"
+            },
+            {
+              "line": 532,
+              "text": "[Description(\"Tiles an item or npc by name into a targeted bounding box. Optional constructor parameters. Optional set property list.\")]"
+            },
+            {
+              "line": 533,
+              "text": "public static void Tile_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 539,
+              "text": "[Description(\"Tiles an item or npc by name into a given bounding box, (x, y) parameters are relative to your characters position. Optional constructor parameters. Optional set property list.\")]"
+            },
+            {
+              "line": 540,
+              "text": "public static void TileRXYZ_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 546,
+              "text": "[Description(\"Tiles an item or npc by name into a given bounding box. Optional constructor parameters. Optional set property list.\")]"
+            },
+            {
+              "line": 547,
+              "text": "public static void TileXYZ_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 553,
+              "text": "[Description(\"Tiles an item or npc by name into a targeted bounding box at a fixed Z location. Optional constructor parameters. Optional set property list.\")]"
+            },
+            {
+              "line": 554,
+              "text": "public static void TileZ_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 560,
+              "text": "[Description(\"Tiles an item or npc by name into a targeted bounding box on the map's average Z elevation. Optional constructor parameters. Optional set property list.\")]"
+            },
+            {
+              "line": 561,
+              "text": "public static void TileAvg_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 567,
+              "text": "[Description(\"Tiles an item or npc by name around a targeted bounding box. Optional constructor parameters. Optional set property list.\")]"
+            },
+            {
+              "line": 568,
+              "text": "public static void Outline_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 574,
+              "text": "[Description(\"Tiles an item or npc by name around a given bounding box, (x, y) parameters are relative to your characters position. Optional constructor parameters. Optional set property list.\")]"
+            }
+          ],
+          "error": null
+        },
+        {
+          "requested_path": "Scripts/Commands/Handlers.cs",
+          "resolved_path": "Scripts/Commands/Handlers.cs",
+          "hits": [
+            {
+              "line": 90,
+              "text": "public static void Initialize()"
+            },
+            {
+              "line": 147,
+              "text": "public static void Register(string command, AccessLevel access, CommandEventHandler handler)"
+            },
+            {
+              "line": 154,
+              "text": "public static void Where_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 185,
+              "text": "public static void DropHolding_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 191,
+              "text": "public static void DropHolding_OnTarget(Mobile from, object obj)"
+            },
+            {
+              "line": 236,
+              "text": "public static void DeleteList_Callback(Mobile from, bool okay, object state)"
+            },
+            {
+              "line": 261,
+              "text": "public static void ClearFacet_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 299,
+              "text": "public static void GetFollowers_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 305,
+              "text": "public static void GetFollowers_OnTarget(Mobile from, object obj)"
+            },
+            {
+              "line": 377,
+              "text": "public static void ReplaceBankers_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 419,
+              "text": "public static void ViewEquip_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 425,
+              "text": "[Description(\"Plays a sound to players within 12 tiles of you. The (toAll) argument specifies to everyone, or just those who can see you.\")]"
+            },
+            {
+              "line": 426,
+              "text": "public static void Sound_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 438,
+              "text": "public static void Echo_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 450,
+              "text": "public static void Bank_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 457,
+              "text": "public static void Help_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 498,
+              "text": "public static void StaffMessage_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 506,
+              "text": "public static void BroadcastMessage_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 512,
+              "text": "public static void BroadcastMessage(AccessLevel ac, int hue, string message)"
+            },
+            {
+              "line": 520,
+              "text": "public static void APN_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 531,
+              "text": "public static void Animate_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 545,
+              "text": "public static void Cast_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 567,
+              "text": "public static void Stuck_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 574,
+              "text": "public static void Light_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 581,
+              "text": "public static void Stats_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 590,
+              "text": "private static void SpeedBoost_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 613,
+              "text": "private static void PlaySound(Mobile m, int index, bool toAll)"
+            },
+            {
+              "line": 637,
+              "text": "private static void Client_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 644,
+              "text": "private static void Move_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 651,
+              "text": "private static void Save_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 659,
+              "text": "private static void BackgroundSave_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 664,
+              "text": "private static bool FixMap(ref Map map, ref Point3D loc, Item item)"
+            },
+            {
+              "line": 676,
+              "text": "private static bool FixMap(ref Map map, ref Point3D loc, Mobile m)"
+            },
+            {
+              "line": 689,
+              "text": "private static void Go_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 891,
+              "text": "private static ItemListEntry[] GetEquip(Mobile m)"
+            }
+          ],
+          "error": null
+        },
+        {
+          "requested_path": "Scripts/Commands/DoorGenDelete.cs",
+          "resolved_path": "Scripts/Commands/DoorGenDelete.cs",
+          "hits": [
+            {
+              "line": 80,
+              "text": "private static readonly Rectangle2D[] m_BritRegions = new Rectangle2D[]"
+            },
+            {
+              "line": 99,
+              "text": "private static readonly Rectangle2D[] m_IlshRegions = new Rectangle2D[]"
+            },
+            {
+              "line": 103,
+              "text": "private static readonly Rectangle2D[] m_MalasRegions = new Rectangle2D[]"
+            },
+            {
+              "line": 107,
+              "text": "private static readonly int[] m_SouthFrames = new int[]"
+            },
+            {
+              "line": 180,
+              "text": "private static readonly int[] m_NorthFrames = new int[]"
+            },
+            {
+              "line": 252,
+              "text": "private static readonly int[] m_EastFrames = new int[]"
+            },
+            {
+              "line": 325,
+              "text": "private static readonly int[] m_WestFrames = new int[]"
+            },
+            {
+              "line": 397,
+              "text": "private static Map m_Map;"
+            },
+            {
+              "line": 398,
+              "text": "private static int m_Count;"
+            },
+            {
+              "line": 399,
+              "text": "public static void Initialize()"
+            },
+            {
+              "line": 406,
+              "text": "public static void DoorGenDelete_OnCommand(CommandEventArgs e)"
+            },
+            {
+              "line": 413,
+              "text": "public static void Delete()"
+            },
+            {
+              "line": 457,
+              "text": "public static void DeleteDoor(int x, int y, int z)"
+            },
+            {
+              "line": 465,
+              "text": "public static void Delete(Rectangle2D region)"
+            },
+            {
+              "line": 474,
+              "text": "StaticTile[] tiles = m_Map.Tiles.GetStaticTiles(vx, vy);"
+            },
+            {
+              "line": 476,
+              "text": "for (int i = 0; i < tiles.Length; ++i)"
+            },
+            {
+              "line": 478,
+              "text": "StaticTile tile = tiles[i];"
+            },
+            {
+              "line": 480,
+              "text": "int id = tile.ID;"
+            },
+            {
+              "line": 481,
+              "text": "int z = tile.Z;"
+            },
+            {
+              "line": 536,
+              "text": "public static bool IsFrame(int id, int[] list)"
+            },
+            {
+              "line": 556,
+              "text": "public static bool IsNorthFrame(int id)"
+            },
+            {
+              "line": 561,
+              "text": "public static bool IsSouthFrame(int id)"
+            },
+            {
+              "line": 566,
+              "text": "public static bool IsWestFrame(int id)"
+            },
+            {
+              "line": 571,
+              "text": "public static bool IsEastFrame(int id)"
+            },
+            {
+              "line": 576,
+              "text": "public static bool IsEastFrame(int x, int y, int z)"
+            },
+            {
+              "line": 578,
+              "text": "StaticTile[] tiles = m_Map.Tiles.GetStaticTiles(x, y);"
+            },
+            {
+              "line": 580,
+              "text": "for (int i = 0; i < tiles.Length; ++i)"
+            },
+            {
+              "line": 582,
+              "text": "StaticTile tile = tiles[i];"
+            },
+            {
+              "line": 584,
+              "text": "if (tile.Z == z && IsEastFrame(tile.ID))"
+            },
+            {
+              "line": 591,
+              "text": "public static bool IsSouthFrame(int x, int y, int z)"
+            },
+            {
+              "line": 593,
+              "text": "StaticTile[] tiles = m_Map.Tiles.GetStaticTiles(x, y);"
+            },
+            {
+              "line": 595,
+              "text": "for (int i = 0; i < tiles.Length; ++i)"
+            },
+            {
+              "line": 597,
+              "text": "StaticTile tile = tiles[i];"
+            },
+            {
+              "line": 599,
+              "text": "if (tile.Z == z && IsSouthFrame(tile.ID))"
+            },
+            {
+              "line": 606,
+              "text": "private static int DeleteBaseDoor(Map map, Point3D p)"
+            }
+          ],
+          "error": null
+        },
+        {
+          "requested_path": "Scripts/Misc/MapDefinitions.cs",
+          "resolved_path": "Scripts/Misc/MapDefinitions.cs",
+          "hits": [
+            {
+              "line": 77,
+              "text": "public static void Configure()"
+            },
+            {
+              "line": 115,
+              "text": "*  - <width>, <height> : Size of the map (in tiles)"
+            },
+            {
+              "line": 126,
+              "text": "public static void RegisterMap(int mapIndex, int mapID, int fileIndex, int width, int height, int season, string name, MapRules rules)"
+            }
+          ],
+          "error": null
+        },
+        {
+          "requested_path": "Scripts/Regions/BaseRegion.cs",
+          "resolved_path": "Scripts/Regions/BaseRegion.cs",
+          "hits": [
+            {
+              "line": 89,
+              "text": "private static readonly List<Rectangle3D> m_RectBuffer1 = new List<Rectangle3D>();"
+            },
+            {
+              "line": 90,
+              "text": "private static readonly List<Rectangle3D> m_RectBuffer2 = new List<Rectangle3D>();"
+            },
+            {
+              "line": 91,
+              "text": "private static readonly List<Int32> m_SpawnBuffer1 = new List<Int32>();"
+            },
+            {
+              "line": 92,
+              "text": "private static readonly List<Item> m_SpawnBuffer2 = new List<Item>();"
+            },
+            {
+              "line": 269,
+              "text": "public static void Configure()"
+            },
+            {
+              "line": 274,
+              "text": "public static string GetRuneNameFor(Region region)"
+            },
+            {
+              "line": 289,
+              "text": "public static bool CanSpawn(Region region, params Type[] types)"
+            },
+            {
+              "line": 358,
+              "text": "public Point3D RandomSpawnLocation(int spawnHeight, bool land, bool water, Point3D home, int range)"
+            },
+            {
+              "line": 428,
+              "text": "LandTile lt = map.Tiles.GetLandTile(x, y);"
+            },
+            {
+              "line": 433,
+              "text": "TileFlag ltFlags = TileData.LandTable[lt.ID & TileData.MaxLandValue].Flags;"
+            },
+            {
+              "line": 442,
+              "text": "else if (land && !ltImpassable)"
+            },
+            {
+              "line": 445,
+              "text": "StaticTile[] staticTiles = map.Tiles.GetStaticTiles(x, y, true);"
+            },
+            {
+              "line": 449,
+              "text": "StaticTile tile = staticTiles[j];"
+            },
+            {
+              "line": 450,
+              "text": "ItemData id = TileData.ItemTable[tile.ID & TileData.MaxItemValue];"
+            },
+            {
+              "line": 451,
+              "text": "int tileZ = tile.Z + id.CalcHeight;"
+            },
+            {
+              "line": 459,
+              "text": "else if (land && id.Surface && !id.Impassable)"
+            },
+            {
+              "line": 469,
+              "text": "if (!(item is BaseMulti) && item.ItemID <= TileData.MaxItemValue && item.AtWorldPoint(x, y))"
+            },
+            {
+              "line": 484,
+              "text": "else if (land && id.Surface && !id.Impassable)"
+            },
+            {
+              "line": 570,
+              "text": "StaticTile tile = staticTiles[j];"
+            },
+            {
+              "line": 571,
+              "text": "ItemData id = TileData.ItemTable[tile.ID & TileData.MaxItemValue];"
+            },
+            {
+              "line": 573,
+              "text": "if ((id.Surface || id.Impassable) && tile.Z + id.CalcHeight > z && tile.Z < top)"
+            }
+          ],
+          "error": null
+        },
+        {
+          "requested_path": "Scripts/Multis/ComponentVerification.cs",
+          "resolved_path": "Scripts/Multis/ComponentVerification.cs",
+          "hits": [
+            {
+              "line": 89,
+              "text": "m_ItemTable = CreateTable(TileData.MaxItemValue);"
+            },
+            {
+              "line": 246,
+              "text": "private static int[] CreateTable(int length)"
+            },
+            {
+              "line": 268,
+              "text": "private static void LoadSpreadsheet(int[] table, string path, params string[] tileColumns)"
+            },
+            {
+              "line": 357,
+              "text": "private static string[] ReadLine(StreamReader ip)"
+            }
+          ],
+          "error": null
+        }
+      ]
+    }
+  ],
+  "execution": {
+    "runuo_executed": false,
+    "runuo_mutated": false,
+    "obsidion_executed": false,
+    "obsidion_source_mutated": false,
+    "build_executed": false
+  }
+}

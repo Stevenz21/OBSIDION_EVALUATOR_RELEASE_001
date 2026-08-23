@@ -1,0 +1,892 @@
+{
+  "schema": "OBSIDION_RUNUO_COMPATIBILITY_DIFF_V1",
+  "obsidion_files_inspected": 12371,
+  "summary": {
+    "MISSING_OR_UNOBSERVED": 23,
+    "MATCH_OR_ADAPTER_CANDIDATE": 36
+  },
+  "contracts": [
+    {
+      "family": "ENTITY",
+      "contract": "combatant",
+      "status": "MISSING_OR_UNOBSERVED",
+      "hits": [],
+      "hit_count": 0
+    },
+    {
+      "family": "ENTITY",
+      "contract": "Combatant",
+      "status": "MISSING_OR_UNOBSERVED",
+      "hits": [],
+      "hit_count": 0
+    },
+    {
+      "family": "ENTITY",
+      "contract": "Container",
+      "status": "MATCH_OR_ADAPTER_CANDIDATE",
+      "hits": [
+        "Tools/Utilities/TEST_PROJECT_MEMBERSHIP.py",
+        "Tools/Utilities/EternalContainerOwnerForensics.py",
+        "Tools/Utilities/EternalFindItemsByTypeForensics.py",
+        "Tools/Utilities/OBSIDION_ENGINE_SIX_FAMILY_BOMBER.py",
+        "Tools/Utilities/EternalContainerOwnershipRecon.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/jinja2/nodes.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/jinja2/tests.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/charset_normalizer/models.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/numpy/lib/_datasource.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/numpy/lib/_user_array_impl.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pyqtgraph/dockarea/Container.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pyqtgraph/dockarea/DockArea.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pyqtgraph/widgets/ProgressDialog.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pyqtgraph/graphicsItems/ROI.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/minecraft.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/urbi.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/foxpro.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/urllib3/util/url.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pip/_vendor/typing_extensions.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pip/_internal/operations/freeze.py"
+      ],
+      "hit_count": 58
+    },
+    {
+      "family": "ENTITY",
+      "contract": "Entity",
+      "status": "MATCH_OR_ADAPTER_CANDIDATE",
+      "hits": [
+        "Tools/EngineIntelligence/test_relationship_graph.py",
+        "Tools/EngineIntelligence/test_inheritance.py",
+        "Tools/EngineIntelligence/analyzers/migration_analyzer.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/token.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/styles/bw.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/styles/lightbulb.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/styles/zenburn.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/styles/coffee.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/styles/gh_dark.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/styles/arduino.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/styles/paraiso_dark.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/styles/rainbow_dash.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/styles/nord.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/styles/trac.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/styles/tango.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/styles/friendly_grayscale.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/styles/autumn.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/styles/rrt.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/styles/lovelace.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/styles/monokai.py"
+      ],
+      "hit_count": 92
+    },
+    {
+      "family": "ENTITY",
+      "contract": "entity",
+      "status": "MATCH_OR_ADAPTER_CANDIDATE",
+      "hits": [
+        "Engine/IntelligenceFramework/Assimilation/Mappers/ConceptMapper.py",
+        "Intelligence/CapabilityIntelligence/obsidion_capability_detector_v1.py",
+        "Tools/EngineIntelligence/test_relationship_graph.py",
+        "Tools/Utilities/ObsidionEngineWarRoom.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/markdown/inlinepatterns.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/markdown/htmlparser.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/markdown/serializers.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/psutil/__init__.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/markdown_it/parser_inline.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/gitdb/pack.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/markdown/extensions/smarty.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/markdown/extensions/toc.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/numpy/f2py/crackfortran.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/markdown_it/rules_inline/__init__.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/markdown_it/rules_inline/entity.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/markdown_it/presets/commonmark.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/markdown_it/common/utils.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/prolog.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/int_fiction.py"
+      ],
+      "hit_count": 48
+    },
+    {
+      "family": "ENTITY",
+      "contract": "ENTITY",
+      "status": "MATCH_OR_ADAPTER_CANDIDATE",
+      "hits": [
+        "Intelligence/KnowledgeGraph/obsidion_knowledge_graph_builder_v1.py",
+        "Intelligence/ArchitectureIntelligence/obsidion_detector_terminal_v10.py",
+        "Intelligence/ArchitectureIntelligence/obsidion_detector_terminal_v8.py",
+        "Intelligence/ArchitectureIntelligence/obsidion_detector_terminal_v9.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/html.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/_openedge_builtins.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/pygments/lexers/html.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/pygments/lexers/_openedge_builtins.py"
+      ],
+      "hit_count": 8
+    },
+    {
+      "family": "ENTITY",
+      "contract": "ITEM",
+      "status": "MATCH_OR_ADAPTER_CANDIDATE",
+      "hits": [
+        "Engine/IntelligenceFramework/Core/ReportingSystem.py",
+        "Tools/Utilities/EternalCompatibilityOwnerRecon.py",
+        "Tools/Utilities/EternalContainerOwnershipRecon.py",
+        "Tools/Utilities/BaseXmlSpawnerKeywordInspector.py",
+        "Tools/Utilities/BaseXmlSpawnerInspector.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/_openedge_builtins.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/pygments/lexers/_openedge_builtins.py",
+        "Tools/WarRoom/Backups/ee-warroom.installed.20260725_042655.py",
+        "Tools/WarRoom/Backups/ee_warroom.pre_semantic_v4.20260725_043056.py"
+      ],
+      "hit_count": 9
+    },
+    {
+      "family": "ENTITY",
+      "contract": "Item",
+      "status": "MATCH_OR_ADAPTER_CANDIDATE",
+      "hits": [
+        "Engine/IntelligenceFramework/Core/ReportingSystem.py",
+        "Engine/IntelligenceFramework/Core/FrameworkManager.py",
+        "Engine/IntelligenceFramework/History/DecisionHistory.py",
+        "Tools/EngineIntelligence/test_relationship_graph.py",
+        "Tools/EngineIntelligence/test_inheritance.py",
+        "Tools/Utilities/TEST_PROJECT_MEMBERSHIP.py",
+        "Tools/Utilities/EternalContainerOwnerForensics.py",
+        "Tools/Utilities/EternalFindItemsByTypeForensics.py",
+        "Tools/Utilities/OBSIDION_ENGINE_SIX_FAMILY_BOMBER.py",
+        "Tools/Utilities/EternalCompatibilityOwnerRecon.py",
+        "Tools/Utilities/OBSIDION_ENGINE_API_WELDER.py",
+        "Tools/Utilities/EternalContainerOwnershipRecon.py",
+        "Tools/EngineIntelligence/analyzers/migration_analyzer.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/markdown/blockprocessors.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/git/util.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/watchdog/observers/fsevents.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/watchdog/utils/bricks.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/numpy/_core/_internal.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/markdown_it/rules_block/list.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pyqtgraph/widgets/TreeWidget.py"
+      ],
+      "hit_count": 52
+    },
+    {
+      "family": "ENTITY",
+      "contract": "item",
+      "status": "MATCH_OR_ADAPTER_CANDIDATE",
+      "hits": [
+        "Engine/IntelligenceFramework/Core/EngineBrain.py",
+        "Engine/IntelligenceFramework/Core/EvolutionIntelligence.py",
+        "Engine/IntelligenceFramework/Core/ProvenanceIntelligence.py",
+        "Engine/IntelligenceFramework/Core/ReportingSystem.py",
+        "Engine/IntelligenceFramework/Core/FrameworkManager.py",
+        "Engine/IntelligenceFramework/Core/ArchitectureIntelligence.py",
+        "Engine/IntelligenceFramework/Core/RuntimeDiscovery.py",
+        "Engine/IntelligenceFramework/Assimilation/Analyzers/CapabilityAnalyzer.py",
+        "Engine/IntelligenceFramework/Assimilation/Mappers/ConceptMapper.py",
+        "Intelligence/CapabilityIntelligence/obsidion_capability_composition_v2.py",
+        "Intelligence/ProvenanceIntelligence/obsidion_provenance_chain_v2.py",
+        "Intelligence/LicenseIntelligence/obsidion_license_analyzer_v1.py",
+        "Intelligence/ArchitectureIntelligence/obsidion_detector_terminal_v5.py",
+        "Intelligence/ArchitectureIntelligence/obsidion_detector_terminal_v3.py",
+        "Intelligence/ArchitectureIntelligence/relationship_graph_v2.py",
+        "Intelligence/ArchitectureIntelligence/architecture_viewer_v1.py",
+        "Intelligence/ArchitectureIntelligence/obsidion_detector_v1.py",
+        "Intelligence/ArchitectureIntelligence/obsidion_detector_terminal_v10.py",
+        "Intelligence/ArchitectureIntelligence/obsidion_detector_terminal_v8.py",
+        "Intelligence/ArchitectureIntelligence/obsidion_detector_terminal_v6.py"
+      ],
+      "hit_count": 792
+    },
+    {
+      "family": "ENTITY",
+      "contract": "Mobile",
+      "status": "MATCH_OR_ADAPTER_CANDIDATE",
+      "hits": [
+        "Tools/EngineIntelligence/test_relationship_graph.py",
+        "Tools/EngineIntelligence/test_inheritance.py",
+        "Tools/Utilities/EternalCompatibilityOwnerRecon.py",
+        "Tools/EngineIntelligence/analyzers/migration_analyzer.py",
+        "Tools/EngineIntelligence/provenance/test_lineage.py"
+      ],
+      "hit_count": 5
+    },
+    {
+      "family": "ENTITY",
+      "contract": "mobile",
+      "status": "MATCH_OR_ADAPTER_CANDIDATE",
+      "hits": [
+        "Engine/IntelligenceFramework/Assimilation/Mappers/ConceptMapper.py",
+        "Tools/EngineIntelligence/test_relationship_graph.py",
+        "Tools/Utilities/ObsidionEngineWarRoom.py",
+        "Tools/ObsidionRegistry/Obsidion_Intelligence_Core_All_In_One.py",
+        "Tools/ObsidionRegistry/registry_gameplay_v1.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/OpenGL/GLES2/EXT/shader_pixel_local_storage.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/WorldEditor/.venv/lib/python3.12/site-packages/OpenGL/GLES2/EXT/shader_pixel_local_storage.py"
+      ],
+      "hit_count": 7
+    },
+    {
+      "family": "ENTITY",
+      "contract": "Serial",
+      "status": "MATCH_OR_ADAPTER_CANDIDATE",
+      "hits": [
+        "Tools/Utilities/XmlAttachInspector.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pyqtgraph/examples/parallelize.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/c_like.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/pygments/lexers/c_like.py"
+      ],
+      "hit_count": 4
+    },
+    {
+      "family": "ENTITY",
+      "contract": "serial",
+      "status": "MATCH_OR_ADAPTER_CANDIDATE",
+      "hits": [
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/packaging/markers.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/numpy/testing/tests/test_utils.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/numpy/random/tests/test_random.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/numpy/random/tests/test_generator_mt19937.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/numpy/random/tests/test_randomstate.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pyqtgraph/multiprocess/parallelizer.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pyqtgraph/examples/parallelize.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/pddl.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/_mysql_builtins.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/int_fiction.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/lisp.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/_postgres_builtins.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/unicon.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/chapel.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pip/_vendor/pyparsing/__init__.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pip/_vendor/distlib/markers.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pip/_vendor/distlib/version.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pip/_vendor/packaging/markers.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/packaging/markers.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/OpenGL/raw/GLX/_types.py"
+      ],
+      "hit_count": 40
+    },
+    {
+      "family": "NETWORK",
+      "contract": "listener",
+      "status": "MATCH_OR_ADAPTER_CANDIDATE",
+      "hits": [
+        "Engine/IntelligenceFramework/Assimilation/Mappers/ConceptMapper.py",
+        "Tools/EngineIntelligence/core/intelligence_bus.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pyqtgraph/graphicsItems/ViewBox/ViewBox.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/lisp.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/matlab.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/_lilypond_builtins.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pip/_vendor/colorama/tests/ansitowin32_test.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/colorama/tests/ansitowin32_test.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/pygments/lexers/lisp.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/pygments/lexers/matlab.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/pygments/lexers/_lilypond_builtins.py"
+      ],
+      "hit_count": 11
+    },
+    {
+      "family": "NETWORK",
+      "contract": "Listener",
+      "status": "MATCH_OR_ADAPTER_CANDIDATE",
+      "hits": [
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pyqtgraph/multiprocess/processes.py"
+      ],
+      "hit_count": 1
+    },
+    {
+      "family": "NETWORK",
+      "contract": "messagePump",
+      "status": "MISSING_OR_UNOBSERVED",
+      "hits": [],
+      "hit_count": 0
+    },
+    {
+      "family": "NETWORK",
+      "contract": "MessagePump",
+      "status": "MISSING_OR_UNOBSERVED",
+      "hits": [],
+      "hit_count": 0
+    },
+    {
+      "family": "NETWORK",
+      "contract": "NetState",
+      "status": "MATCH_OR_ADAPTER_CANDIDATE",
+      "hits": [
+        "Tools/Utilities/OBSIDION_ENGINE_SIX_FAMILY_BOMBER.py",
+        "Tools/EngineIntelligence/analyzers/migration_analyzer.py",
+        "Tools/OBSIDION_ENGINE_CONTRACT_EVOLUTION_ENGINE/contract_evolution/classifier.py"
+      ],
+      "hit_count": 3
+    },
+    {
+      "family": "NETWORK",
+      "contract": "PacketHandler",
+      "status": "MISSING_OR_UNOBSERVED",
+      "hits": [],
+      "hit_count": 0
+    },
+    {
+      "family": "NETWORK",
+      "contract": "PacketReader",
+      "status": "MATCH_OR_ADAPTER_CANDIDATE",
+      "hits": [
+        "Tools/OBSIDION_ENGINE_CONTRACT_EVOLUTION_ENGINE/contract_evolution/classifier.py"
+      ],
+      "hit_count": 1
+    },
+    {
+      "family": "NETWORK",
+      "contract": "PacketWriter",
+      "status": "MATCH_OR_ADAPTER_CANDIDATE",
+      "hits": [
+        "Tools/OBSIDION_ENGINE_CONTRACT_EVOLUTION_ENGINE/contract_evolution/classifier.py"
+      ],
+      "hit_count": 1
+    },
+    {
+      "family": "NETWORK",
+      "contract": "SendQueue",
+      "status": "MISSING_OR_UNOBSERVED",
+      "hits": [],
+      "hit_count": 0
+    },
+    {
+      "family": "PERSISTENCE",
+      "contract": "BinaryFileWriter",
+      "status": "MATCH_OR_ADAPTER_CANDIDATE",
+      "hits": [
+        "Tools/Utilities/EternalCompatibilityOwnerRecon.py"
+      ],
+      "hit_count": 1
+    },
+    {
+      "family": "PERSISTENCE",
+      "contract": "GenericReader",
+      "status": "MATCH_OR_ADAPTER_CANDIDATE",
+      "hits": [
+        "Tools/Utilities/EternalCompatibilityOwnerRecon.py",
+        "Tools/EngineIntelligence/analyzers/migration_analyzer.py"
+      ],
+      "hit_count": 2
+    },
+    {
+      "family": "PERSISTENCE",
+      "contract": "GenericWriter",
+      "status": "MATCH_OR_ADAPTER_CANDIDATE",
+      "hits": [
+        "Tools/Utilities/EternalCompatibilityOwnerRecon.py",
+        "Tools/EngineIntelligence/analyzers/migration_analyzer.py"
+      ],
+      "hit_count": 2
+    },
+    {
+      "family": "PERSISTENCE",
+      "contract": "ISerializable",
+      "status": "MISSING_OR_UNOBSERVED",
+      "hits": [],
+      "hit_count": 0
+    },
+    {
+      "family": "PERSISTENCE",
+      "contract": "Persistence",
+      "status": "MATCH_OR_ADAPTER_CANDIDATE",
+      "hits": [
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/graphics.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/pygments/lexers/graphics.py"
+      ],
+      "hit_count": 2
+    },
+    {
+      "family": "PERSISTENCE",
+      "contract": "SaveStrategy",
+      "status": "MISSING_OR_UNOBSERVED",
+      "hits": [],
+      "hit_count": 0
+    },
+    {
+      "family": "SCRIPT_COMPILER",
+      "contract": "assembly",
+      "status": "MATCH_OR_ADAPTER_CANDIDATE",
+      "hits": [
+        "Tools/TerrainRenderBridge/Runtime/obj/Release/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs",
+        "Tools/TerrainRenderBridge/Runtime/obj/Release/net8.0/TerrainRenderBridge.AssemblyInfo.cs",
+        "Tools/TerrainRenderBridge/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs",
+        "Tools/TerrainRenderBridge/obj/Debug/net8.0/TerrainRenderBridge.AssemblyInfo.cs",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/int_fiction.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/asm.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/amdgpu.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/mips.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/jvm.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/esoteric.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/dalvik.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/modula2.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/packaging/licenses/_spdx.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pip/_vendor/distlib/scripts.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/networkx/utils/decorators.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/OpenGL/GLES2/NV/bindless_texture.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/OpenGL/GLES2/NV/shader_atomic_fp16_vector.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/OpenGL/GLES2/NV/mesh_shader.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/OpenGL/GLES2/NV/path_rendering.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/OpenGL/GL/EXT/shader_image_load_store.py"
+      ],
+      "hit_count": 117
+    },
+    {
+      "family": "SCRIPT_COMPILER",
+      "contract": "Assembly",
+      "status": "MATCH_OR_ADAPTER_CANDIDATE",
+      "hits": [
+        "Tools/Utilities/EternalCompatibilityOwnerRecon.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/int_fiction.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/asm.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/mips.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/matlab.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/OpenGL/GL/NV/shader_storage_buffer_object.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/pygments/lexers/int_fiction.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/pygments/lexers/asm.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/pygments/lexers/mips.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/pygments/lexers/matlab.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/WorldEditor/.venv/lib/python3.12/site-packages/OpenGL/GL/NV/shader_storage_buffer_object.py"
+      ],
+      "hit_count": 11
+    },
+    {
+      "family": "SCRIPT_COMPILER",
+      "contract": "COMPILER",
+      "status": "MATCH_OR_ADAPTER_CANDIDATE",
+      "hits": [
+        "Engine/IntelligenceFramework/Analyzers/ErrorFamilyAnalyzer.py",
+        "Tools/WarRoom/ee_warroom.py",
+        "Tools/Utilities/EternalBuildFamilyInspector.py",
+        "Tools/Utilities/XmlSpawnerBuildStrikeInspector.py",
+        "Tools/Utilities/OBSIDION_WAR_ROOM_V3.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/BACKUPS/command_center_BEFORE_CINEMATIC_20260727_054508.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/BACKUPS/command_center_BEFORE_REACTOR_20260727_054916.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/modula2.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/_openedge_builtins.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/pygments/lexers/modula2.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/pygments/lexers/_openedge_builtins.py",
+        "Tools/WarRoom/Backups/ee-warroom.installed.20260725_042655.py",
+        "Tools/WarRoom/Backups/ee_warroom.pre_semantic_v4.20260725_043056.py"
+      ],
+      "hit_count": 13
+    },
+    {
+      "family": "SCRIPT_COMPILER",
+      "contract": "Compiler",
+      "status": "MATCH_OR_ADAPTER_CANDIDATE",
+      "hits": [
+        "Engine/IntelligenceFramework/Core/EngineBrain.py",
+        "Engine/IntelligenceFramework/Core/ReportingSystem.py",
+        "Engine/IntelligenceFramework/Core/BuildIntelligence.py",
+        "Tools/ObsidionEngineMissionControl/mission_control.py",
+        "Tools/ObsidionEngineMissionControl/gaming_developer_console_scope.py",
+        "Tools/WarRoom/ee_warroom.py",
+        "Tools/OBSIDION_ENGINE_CONTRACT_EVOLUTION_ENGINE/evolution_engine.py",
+        "Tools/Utilities/OBSIDION_ENGINE_SIX_FAMILY_BOMBER.py",
+        "Tools/Utilities/OBSIDION_ENGINE_API_WELDER.py",
+        "Tools/Utilities/ObsidionEngineWarRoom.py",
+        "Tools/Utilities/XmlSpawnerBuildStrikeInspector.py",
+        "Tools/ObsidionEngineCIP/cip.py",
+        "Tools/EngineIntelligence/intelligence/cip_models.py",
+        "Tools/EngineIntelligence/intelligence/cip_parser.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/qdarkstyle/light/lightstyle_rc.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/qdarkstyle/dark/darkstyle_rc.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/numpy/_core/tests/test_limited_api.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/numpy/_core/tests/test_cython.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/numpy/random/tests/test_extending.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/numpy/f2py/tests/test_f2py2e.py"
+      ],
+      "hit_count": 35
+    },
+    {
+      "family": "SCRIPT_COMPILER",
+      "contract": "ScriptCompiler",
+      "status": "MATCH_OR_ADAPTER_CANDIDATE",
+      "hits": [
+        "Tools/Utilities/EternalCompatibilityOwnerRecon.py"
+      ],
+      "hit_count": 1
+    },
+    {
+      "family": "SPATIAL",
+      "contract": "CanFit",
+      "status": "MATCH_OR_ADAPTER_CANDIDATE",
+      "hits": [
+        "Tools/Utilities/OBSIDION_ENGINE_SIX_FAMILY_BOMBER.py"
+      ],
+      "hit_count": 1
+    },
+    {
+      "family": "SPATIAL",
+      "contract": "canFit",
+      "status": "MISSING_OR_UNOBSERVED",
+      "hits": [],
+      "hit_count": 0
+    },
+    {
+      "family": "SPATIAL",
+      "contract": "CanSpawnMobile",
+      "status": "MISSING_OR_UNOBSERVED",
+      "hits": [],
+      "hit_count": 0
+    },
+    {
+      "family": "SPATIAL",
+      "contract": "GetAverageZ",
+      "status": "MISSING_OR_UNOBSERVED",
+      "hits": [],
+      "hit_count": 0
+    },
+    {
+      "family": "SPATIAL",
+      "contract": "GetItemsInRange",
+      "status": "MISSING_OR_UNOBSERVED",
+      "hits": [],
+      "hit_count": 0
+    },
+    {
+      "family": "SPATIAL",
+      "contract": "GetMobilesInRange",
+      "status": "MISSING_OR_UNOBSERVED",
+      "hits": [],
+      "hit_count": 0
+    },
+    {
+      "family": "SPATIAL",
+      "contract": "GetObjectsInRange",
+      "status": "MISSING_OR_UNOBSERVED",
+      "hits": [],
+      "hit_count": 0
+    },
+    {
+      "family": "TILES",
+      "contract": "LandTile",
+      "status": "MISSING_OR_UNOBSERVED",
+      "hits": [],
+      "hit_count": 0
+    },
+    {
+      "family": "TILES",
+      "contract": "landTile",
+      "status": "MISSING_OR_UNOBSERVED",
+      "hits": [],
+      "hit_count": 0
+    },
+    {
+      "family": "TILES",
+      "contract": "StaticTile",
+      "status": "MISSING_OR_UNOBSERVED",
+      "hits": [],
+      "hit_count": 0
+    },
+    {
+      "family": "TILES",
+      "contract": "tiledata",
+      "status": "MISSING_OR_UNOBSERVED",
+      "hits": [],
+      "hit_count": 0
+    },
+    {
+      "family": "TILES",
+      "contract": "TileData",
+      "status": "MISSING_OR_UNOBSERVED",
+      "hits": [],
+      "hit_count": 0
+    },
+    {
+      "family": "TILES",
+      "contract": "TileList",
+      "status": "MISSING_OR_UNOBSERVED",
+      "hits": [],
+      "hit_count": 0
+    },
+    {
+      "family": "TILES",
+      "contract": "TileMatrix",
+      "status": "MISSING_OR_UNOBSERVED",
+      "hits": [],
+      "hit_count": 0
+    },
+    {
+      "family": "TILES",
+      "contract": "TileMatrixPatch",
+      "status": "MISSING_OR_UNOBSERVED",
+      "hits": [],
+      "hit_count": 0
+    },
+    {
+      "family": "TIMING",
+      "contract": "timer",
+      "status": "MATCH_OR_ADAPTER_CANDIDATE",
+      "hits": [
+        "Tools/EngineIntelligence/EngineIntelligenceUI/BACKUPS/command_center_BEFORE_NEURAL_WAR_CORE_FIX_20260727_140121.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/BACKUPS/command_center_BEFORE_THRONE_20260727_170822.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/BACKUPS/command_center_BEFORE_CORE_SYSTEM_20260802_135850.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/BACKUPS/command_center_BEFORE_REALM_THRONE_20260727_172539.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/BACKUPS/command_center_BEFORE_REALM_THRONE_20260727_172445.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/BACKUPS/command_center_BEFORE_WORLD_FORGE_FIX_20260727_170511.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/BACKUPS/command_center_BEFORE_ASCENSION_20260727_171434.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/BACKUPS/command_center_BEFORE_BLACKVAULT_20260802_135857.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Preview/Obsidion_Realm_Preview_Client_v1.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Preview/Obsidion_AssetRealm_Renderer_v1.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Preview/Obsidion_Realm_Renderer_v2.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/rich/table.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/rich/_timer.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/psutil/__init__.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/psutil/_pswindows.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/numpy/_pytesttester.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pyqtgraph/ThreadsafeTimer.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pyqtgraph/SignalProxy.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/qtawesome/animation.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/qtawesome/icon_browser.py"
+      ],
+      "hit_count": 103
+    },
+    {
+      "family": "TIMING",
+      "contract": "Timer",
+      "status": "MATCH_OR_ADAPTER_CANDIDATE",
+      "hits": [
+        "Tools/Utilities/OBSIDION_ENGINE_API_WELDER.py",
+        "Tools/Utilities/XmlAttachmentInspector.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/rich/_timer.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pyqtgraph/SignalProxy.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/git/cmd.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/_vbscript_builtins.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/_julia_builtins.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/pawn.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/actionscript.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/foxpro.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pip/_vendor/rich/_timer.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/rich/_timer.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/git/cmd.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/OpenGL/GLUT/special.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/pygments/lexers/_vbscript_builtins.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/pygments/lexers/_julia_builtins.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/pygments/lexers/pawn.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/pygments/lexers/actionscript.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/pygments/lexers/foxpro.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/pip/_vendor/rich/_timer.py"
+      ],
+      "hit_count": 22
+    },
+    {
+      "family": "WORLD",
+      "contract": "Map",
+      "status": "MATCH_OR_ADAPTER_CANDIDATE",
+      "hits": [
+        "Engine/IntelligenceFramework/Assimilation/Mappers/ConceptMapper.py",
+        "Intelligence/ArchitectureIntelligence/architecture_terminal_viewer_v2.py",
+        "Intelligence/PlatformIntelligence/ConnectionEvidence/obsidion_connection_evidence_correlator_v1.py",
+        "Intelligence/PriorArtIntelligence/NoveltyMap/obsidion_architecture_novelty_map_v1.py",
+        "Intelligence/PriorArtIntelligence/FusionMap/obsidion_prior_art_fusion_map_v1.py",
+        "Tools/WarRoom/ee_warroom.py",
+        "Tools/Utilities/OBSIDION_WAR_ROOM_V2.py",
+        "Tools/Utilities/OBSIDION_WAR_ROOM_V3.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/PIL/TiffTags.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/PIL/XpmImagePlugin.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/rich/box.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/rich/markdown.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/qtpy/QtSql.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/qtpy/QtCore.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/qtpy/QtWidgets.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/qtpy/QtPrintSupport.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/qtpy/QtGui.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pyqtgraph/functions.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/token.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/packaging/metadata.py"
+      ],
+      "hit_count": 108
+    },
+    {
+      "family": "WORLD",
+      "contract": "map",
+      "status": "MATCH_OR_ADAPTER_CANDIDATE",
+      "hits": [
+        "Engine/IntelligenceFramework/Assimilation/Models/ExternalArchitecture.py",
+        "Engine/IntelligenceFramework/Assimilation/Analyzers/CapabilityAnalyzer.py",
+        "Intelligence/CapabilityIntelligence/obsidion_capability_detector_v1.py",
+        "Tools/Utilities/EternalContainerOwnershipRecon.py",
+        "Tools/Utilities/ObsidionEngineWarRoom.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/jinja2/runtime.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/jinja2/environment.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/jinja2/filters.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/jinja2/compiler.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/jinja2/exceptions.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/jinja2/parser.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/PIL/FpxImagePlugin.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/PIL/PcfFontFile.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/PIL/MspImagePlugin.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/PIL/ImImagePlugin.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/PIL/GifImagePlugin.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/PIL/McIdasImagePlugin.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/PIL/JpegImagePlugin.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/PIL/ImageFile.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/PIL/SunImagePlugin.py"
+      ],
+      "hit_count": 718
+    },
+    {
+      "family": "WORLD",
+      "contract": "MAP",
+      "status": "MATCH_OR_ADAPTER_CANDIDATE",
+      "hits": [
+        "Intelligence/ArchitectureIntelligence/architecture_viewer_v1.py",
+        "Intelligence/ArchitectureIntelligence/architecture_terminal_viewer_v2.py",
+        "Intelligence/ArchitectureIntelligence/obsidion_detector_terminal_v6.py",
+        "Intelligence/PriorArtIntelligence/NoveltyMap/obsidion_architecture_novelty_map_v1.py",
+        "Intelligence/PriorArtIntelligence/FusionMap/obsidion_prior_art_fusion_map_v1.py",
+        "Tools/Utilities/EternalContainerOwnerForensics.py",
+        "Tools/Utilities/OBSIDION_WAR_ROOM_V2.py",
+        "Tools/Utilities/EternalFindItemsByTypeForensics.py",
+        "Tools/Utilities/EternalCompatibilityOwnerRecon.py",
+        "Tools/Utilities/BaseXmlSpawnerInspector.py",
+        "Tools/Utilities/XmlAttachmentInspector.py",
+        "Tools/Utilities/OBSIDION_WAR_ROOM_V3.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Obsidion_UI_Archaeology.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Core/ObsidionThroneInteractionMap.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/_sql_builtins.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/_googlesql_builtins.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/gsql.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/apdlexer.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/_openedge_builtins.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/ecl.py"
+      ],
+      "hit_count": 27
+    },
+    {
+      "family": "WORLD",
+      "contract": "region",
+      "status": "MATCH_OR_ADAPTER_CANDIDATE",
+      "hits": [
+        "Intelligence/CapabilityIntelligence/obsidion_capability_detector_v1.py",
+        "Tools/ObsidionEngineMissionControl/eternal_gameplay_bridge.py",
+        "Tools/Utilities/eternal_type_forensics.py",
+        "Tools/Utilities/ObsidionEngineWarRoom.py",
+        "Tools/Utilities/BaseXmlSpawnerInspector.py",
+        "Tools/Utilities/XmlAttachmentInspector.py",
+        "Tools/ObsidionRegistry/Obsidion_Intelligence_Core_All_In_One.py",
+        "Tools/ObsidionRegistry/registry_gameplay_v1.py",
+        "Tools/ObsidionEngineCIP/cip.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/PIL/ImageOps.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/PIL/ImageDraw.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/PIL/ContainerIO.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/PIL/TarIO.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/PIL/PngImagePlugin.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/PIL/ImageTk.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/PIL/ImageWin.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/PIL/ImageTransform.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/PIL/Image.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/rich/region.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/rich/layout.py"
+      ],
+      "hit_count": 141
+    },
+    {
+      "family": "WORLD",
+      "contract": "Region",
+      "status": "MATCH_OR_ADAPTER_CANDIDATE",
+      "hits": [
+        "Tools/Utilities/OBSIDION_ENGINE_SIX_FAMILY_BOMBER.py",
+        "Tools/Utilities/OBSIDION_ENGINE_API_WELDER.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/rich/region.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/rich/layout.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/rich/console.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pyqtgraph/examples/utils.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pyqtgraph/examples/Plotting.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/dotnet.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/scripting.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pip/_vendor/rich/region.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pip/_vendor/rich/layout.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pip/_vendor/rich/console.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/rich/region.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/rich/layout.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/rich/console.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/pygments/lexers/dotnet.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/pygments/lexers/scripting.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/pip/_vendor/rich/region.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/pip/_vendor/rich/layout.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/pip/_vendor/rich/console.py"
+      ],
+      "hit_count": 24
+    },
+    {
+      "family": "WORLD",
+      "contract": "sector",
+      "status": "MATCH_OR_ADAPTER_CANDIDATE",
+      "hits": [
+        "Tools/Utilities/ObsidionEngineWarRoom.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Tools/ObsidionCommandCenter/.venv/lib/python3.12/site-packages/pygments/lexers/_asy_builtins.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/.venv/lib/python3.12/site-packages/pygments/lexers/_asy_builtins.py"
+      ],
+      "hit_count": 3
+    },
+    {
+      "family": "WORLD",
+      "contract": "Sector",
+      "status": "MISSING_OR_UNOBSERVED",
+      "hits": [],
+      "hit_count": 0
+    },
+    {
+      "family": "WORLD",
+      "contract": "World",
+      "status": "MATCH_OR_ADAPTER_CANDIDATE",
+      "hits": [
+        "Engine/IntelligenceFramework/Core/RuntimeDiscovery.py",
+        "Engine/IntelligenceFramework/Assimilation/Mappers/ConceptMapper.py",
+        "Intelligence/PlatformIntelligence/ArchitectureIngestion/obsidion_platform_architecture_ingestion_v1.py",
+        "Intelligence/PriorArtIntelligence/EvidenceCorrelation/obsidion_architecture_evidence_correlation_engine_v1.py",
+        "Intelligence/PriorArtIntelligence/InvestigationMatrix/obsidion_prior_art_matrix_v1.py",
+        "Intelligence/PriorArtIntelligence/ClaimBoundary/obsidion_claim_boundary_analyzer_v1.py",
+        "Intelligence/PriorArtIntelligence/GraphDifferential/obsidion_graph_differential_analyzer_v2.py",
+        "Intelligence/PriorArtIntelligence/ArchitectureComparator/obsidion_architecture_graph_comparator_v1.py",
+        "Intelligence/PriorArtIntelligence/EquivalentPlatform/obsidion_equivalent_platform_investigation_v1.py",
+        "Intelligence/PriorArtIntelligence/NoveltyMap/obsidion_architecture_novelty_map_v1.py",
+        "Intelligence/PriorArtIntelligence/FusionMap/obsidion_prior_art_fusion_map_v1.py",
+        "Tools/ObsidionEngineMissionControl/gaming_developer_console_scope.py",
+        "Tools/ObsidionEngineMissionControl/obsidion_studios.py",
+        "Tools/EngineIntelligence/framework.py",
+        "Tools/Utilities/ObsidionEngineWarRoom.py",
+        "Tools/ObsidionDeveloperConsole/obsidion_console.py",
+        "Tools/WorldEditorNativeBridge/Program.cs",
+        "Tools/WorldFoundationProbe/Program.cs",
+        "Tools/EngineIntelligence/dashboard/sidebar.py",
+        "Tools/EngineIntelligence/dashboard/command_center.py"
+      ],
+      "hit_count": 158
+    },
+    {
+      "family": "WORLD",
+      "contract": "world",
+      "status": "MATCH_OR_ADAPTER_CANDIDATE",
+      "hits": [
+        "Engine/IntelligenceFramework/Assimilation/Mappers/ConceptMapper.py",
+        "Intelligence/CapabilityIntelligence/obsidion_capability_detector_v1.py",
+        "Tools/TerrainRenderBridge/Program.cs",
+        "Tools/ObsidionEngineMissionControl/mission_control.py",
+        "Tools/ObsidionEngineMissionControl/eternal_gameplay_bridge.py",
+        "Tools/ObsidionEngineMissionControl/obsidion_studios.py",
+        "Tools/TerrainMeshProbe/Program.cs",
+        "Tools/WorldHeightGenerationProbe/Program.cs",
+        "Tools/WorldSurfaceClassificationProbe/Program.cs",
+        "Tools/Utilities/ObsidionEngineWarRoom.py",
+        "Tools/WorldEditorNativeBridge/Program.cs",
+        "Tools/TerrainBrushProbe/Program.cs",
+        "Tools/WorldTopologyProbe/Program.cs",
+        "Tools/WorldFoundationProbe/Program.cs",
+        "Tools/EngineIntelligence/dashboard/sidebar.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/BACKUPS/command_center_BEFORE_CORE_SYSTEM_20260802_135850.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/BACKUPS/command_center_BEFORE_REALM_THRONE_20260727_172539.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Core/ObsidionGenerationRequest.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Core/ObsidionWorldDefinition.py",
+        "Tools/EngineIntelligence/EngineIntelligenceUI/Core/ObsidionThroneWorldComposer.py"
+      ],
+      "hit_count": 132
+    }
+  ],
+  "execution": {
+    "runuo_executed": false,
+    "runuo_mutated": false,
+    "obsidion_build_executed": false,
+    "obsidion_runtime_executed": false,
+    "obsidion_source_mutated": false
+  }
+}
